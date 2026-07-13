@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://happyfeet662.github.io/claude-recipe/articles/seikyusho-04-template.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1fbfa3">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Claude Recipe">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="Claude Codeで請求書（4）テンプレ・屋号・ロゴを仕込んで完全自動化">
+<meta property="og:description" content="会社情報・振込先・ロゴ・定型文を“指示書”にまとめておけば、毎回「いつもの形で」の一言で自分仕様の請求書が出る。二度と様式を考えないための仕込み。">
+<meta property="og:url" content="https://happyfeet662.github.io/claude-recipe/articles/seikyusho-04-template.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"Claude Codeで請求書（4）テンプレ・屋号・ロゴを仕込んで完全自動化","inLanguage":"ja","author":{"@type":"Organization","name":"Claude Recipe編集部"},"publisher":{"@type":"Organization","name":"Claude Recipe"},"isAccessibleForFree":false,"mainEntityOfPage":"https://happyfeet662.github.io/claude-recipe/articles/seikyusho-04-template.html"}
+</script>
+<title>Claude Codeで請求書（4）テンプレ・屋号・ロゴを仕込んで完全自動化 — Claude Recipe</title>
+<meta name="description" content="会社情報・振込先・ロゴ・定型文を“指示書”にまとめておけば、毎回「いつもの形で」の一言で自分仕様の請求書が出る。二度と様式を考えないための仕込み。">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/copy.js"></script>
+<script src="../assets/paywall.js"></script>
+<!-- ▼ Google AdSense：サイト追加＆承認後にこの行を有効化
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5746304162931871" crossorigin="anonymous"></script>
+-->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand__logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand__mark">Claude <b>Recipe</b></span>
+    </a>
+    <nav class="nav">
+      <a href="../articles.html">記事一覧</a>
+      <a href="../index.html#start">はじめての方へ</a>
+      <a href="../about.html">このサイトは？</a>
+      <a class="btn btn--primary btn--sm" href="../index.html#follow">フォローする</a>
+    </nav>
+  </div>
+</header>
+
+<article class="article">
+  <div class="wrap">
+    <a class="article__back" href="../articles.html">← 記事一覧にもどる</a>
+
+    <div class="article__banner th-money">
+      <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+        <rect x="54" y="24" width="92" height="92" rx="8" fill="#fff" stroke="#c9930f" stroke-width="4"/>
+        <circle cx="76" cy="46" r="11" fill="#e9f8f3" stroke="#1fbfa3" stroke-width="3"/>
+        <path d="M71 46l4 4 7-7" stroke="#1fbfa3" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="94" y="40" width="44" height="6" rx="3" fill="#ffcb45"/>
+        <rect x="68" y="66" width="64" height="5" rx="2.5" fill="#f0e0b0"/>
+        <rect x="68" y="78" width="64" height="5" rx="2.5" fill="#f0e0b0"/>
+        <rect x="68" y="94" width="34" height="6" rx="3" fill="#f0e0b0"/>
+      </svg>
+    </div>
+
+    <div><span class="chip chip--money">お金・事務</span><span class="lvl-tag lvl-tag--intermediate">中級者</span><span class="lvl-tag lvl-tag--paid">有料</span></div>
+    <h1>Claude Codeで請求書（4）テンプレ・屋号・ロゴを仕込んで完全自動化</h1>
+    <p class="article__lead">毎回「屋号は…振込先は…」と伝えるのも、そろそろ卒業。会社情報・振込先・ロゴ・定型文を一度“指示書”にまとめておけば、次からは<strong>「いつもの形で作って」の一言</strong>で、自分仕様の請求書がそのまま出てきます。二度と様式を考えないための仕込みです。</p>
+    <div class="article__meta">請求書シリーズ 第4回<span class="dot"></span>約12分<span class="dot"></span>有料 / 読み放題パス</div>
+
+    <div class="series">
+      <h4>請求書シリーズ（全6回）</h4>
+      <ol>
+        <li><a href="seikyusho-01-hajimete.html">はじめての請求書：まる投げで1枚つくる</a></li>
+        <li><a href="seikyusho-02-tsukini.html">毎月の請求書を自動で量産する</a></li>
+        <li><a href="seikyusho-03-mitsumori-nyukin.html">見積書・入金チェックまで</a></li>
+        <li class="is-current"><a href="seikyusho-04-template.html">テンプレ・屋号・ロゴを仕込む <span class="paid">有料</span></a></li>
+        <li><a href="seikyusho-05-kaikei-renkei.html">会計ソフト連携・CSVで受け渡し <span class="paid">有料</span></a></li>
+        <li><a href="seikyusho-06-teiki.html">定期請求・リマインドの自動運用 <span class="paid">有料</span></a></li>
+      </ol>
+      <p class="series__note">1〜3は無料。4以降は「請求書シリーズ 読み放題パス」でまとめて読めます。</p>
+    </div>
+
+    <div class="prose">
+      <h2>毎回同じことを伝えるのは、もうやめる</h2>
+      <p>請求書には「毎回変わらない部分」がたくさんあります。屋号・住所・振込先・登録番号・締めの挨拶文…。これらを毎回タイプするのは時間のムダ。<strong>一度だけ“指示書”にまとめておけば</strong>、Claude Codeがそれを見て、いつも同じ体裁で作ってくれます。</p>
+
+      <div class="callout">
+        <strong class="label">だいじな注意</strong>
+        指示書には振込先や登録番号などの情報が入ります。共有相手や保存場所にご注意を。できあがった請求書の金額・振込先は毎回、自分の目でも確認してください。制度（インボイス等）の要件は公式情報もあわせてご確認ください。
+      </div>
+
+      <div class="ad-slot">
+        <span class="ad-slot__label">スポンサーリンク</span>
+        <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+      </div>
+
+      <h3>この続き（有料）で分かること</h3>
+      <ul>
+        <li>“わが社仕様”を固定する「指示書」の作り方</li>
+        <li>ロゴ・印影・色・フォントの入れ方</li>
+        <li>「いつもの形で」の一言で毎回同じに出す運用</li>
+        <li>英語版・シンプル版など、複数フォーマットの使い分け</li>
+      </ul>
+
+      <div class="paywall" data-paywall="seikyu">
+
+        <div class="paywall__cta">
+          <div class="lockicon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="4.5" y="10.5" width="15" height="10" rx="3" fill="#fff" stroke="#c9930f" stroke-width="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" stroke="#c9930f" stroke-width="2" fill="none"/><circle cx="12" cy="15.5" r="1.6" fill="#c9930f"/></svg>
+          </div>
+          <h3>ここから先は「請求書 読み放題パス」で読めます</h3>
+          <p>請求書シリーズの第4回以降（テンプレ自動化・会計ソフト連携など）が、購入後まとめて読み放題になります。</p>
+          <ul class="paywall__perks">
+            <li>この記事の続きを全部読める</li>
+            <li>請求書の有料記事はこれからもすべて読み放題</li>
+            <li>買い切り・追加料金なし</li>
+          </ul>
+          <p class="paywall__price"><b>¥980</b> <span class="once">買い切り（税込）</span></p>
+          <!-- ▼ Stripe決済リンク（請求書パス用）を作成し、下の href を差し替えてください。
+               Stripe側の「支払い後のリダイレクト先」を
+               https://（あなたのサイト）/unlock.html?series=seikyu&to=articles/seikyusho-04-template.html
+               に設定すると、購入後に自動で解錠されます。 -->
+          <div class="paywall__btn">
+            <a class="btn btn--primary btn--lg" href="https://buy.stripe.com/REPLACE_WITH_YOUR_LINK" rel="nofollow">購入して続きを読む</a>
+          </div>
+          <p class="paywall__note">お支払いはStripe（クレジットカード / Apple Pay / Google Pay）。購入後、この端末で自動的に読めるようになります。別の端末で読むときは、購入後に案内されるリンクをその端末でも開いてください。</p>
+        </div>
+
+        <div class="paywall__body">
+          <h2>まず「指示書」を1つ作る</h2>
+          <p>やることはシンプル。請求書に毎回入れる情報を、1枚のメモ（テキストファイル）にまとめて、請求書フォルダに置いておくだけです。中身は次のようなもの。</p>
+          <ul>
+            <li>屋号・氏名・住所・連絡先</li>
+            <li>振込先（銀行・支店・口座番号・名義）</li>
+            <li>インボイス登録番号（ある人）</li>
+            <li>締めの挨拶文（例：「お振込みのほど、よろしくお願いいたします。」）</li>
+            <li>好みの体裁（色・並び・シンプルか装飾ありか）</li>
+          </ul>
+          <p>この指示書づくりも、Claude Codeに手伝ってもらえます。</p>
+          <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">私の請求書に毎回入れる情報をまとめた「指示書」を作ってください。次の内容をきれいに整理して、テキストファイルとして請求書フォルダに保存してください。屋号「△△」、住所「◯◯」、振込先「◯◯銀行 △△支店 普通 1234567 名義◯◯」、登録番号「T1234567890123」、締めの挨拶「お振込みのほど、よろしくお願いいたします」。今後はこのファイルを見て、いつも同じ体裁で請求書を作ってほしい、と分かるように書いてください。</pre></div>
+          <p class="prompt__how">一度作れば、次からは「請求書フォルダの指示書を見て、いつもの形で作って」と頼むだけ。屋号や振込先を毎回打つ必要がなくなります。</p>
+
+          <h2>ロゴ・印影を入れる</h2>
+          <p>ロゴ画像や印影（電子印）の画像ファイルを請求書フォルダに入れておけば、それも使ってもらえます。</p>
+          <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">請求書フォルダに、私のロゴ画像（logo.png）と印影の画像（inkan.png）を入れました。請求書の右上にロゴ、発行者名の横に印影を配置して、体裁よく仕上げてください。次回以降も同じ位置に入れてください。</pre></div>
+
+          <h2>「いつもの形で」の一言で出す</h2>
+          <p>指示書とロゴを仕込んだら、あとは毎回これだけ。</p>
+          <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">請求書フォルダの指示書とロゴを使って、いつもの形で請求書を作ってください。今回は取引先「（株）◯◯」、内容「□□」、税抜◯◯円です。</pre></div>
+          <p>屋号も振込先もロゴも自動で入るので、伝えるのは「取引先・内容・金額」だけ。1件あたり十数秒で作れます。</p>
+
+          <h2>複数フォーマットを使い分ける</h2>
+          <p>取引先によって「英語の請求書」「装飾なしのシンプル版」が必要なこともあります。それぞれの指示書を用意しておけば、切り替えも一言です。</p>
+          <ul>
+            <li><strong>英語版</strong>：「英語の請求書（Invoice）で作って」</li>
+            <li><strong>シンプル版</strong>：「装飾なしのシンプルな体裁で」</li>
+            <li><strong>源泉徴収あり版</strong>：「源泉徴収も計算して差し引いた形で」</li>
+          </ul>
+
+          <div class="callout">
+            <strong class="label">仕込みは一度きり</strong>
+            指示書とロゴを1回用意する手間はかかりますが、それ以降はずっとラク。毎月・毎回の「同じ入力」から完全に解放されます。屋号や振込先が変わったときだけ、指示書を直せばOKです。
+          </div>
+
+          <div class="faq">
+            <details>
+              <summary>指示書ってどんなファイル？むずかしくない？</summary>
+              <p>ただのメモ（テキストファイル）でOKです。作り方もAIに任せられます。上のプロンプトを送れば、中身を整えてファイルにして保存までしてくれます。</p>
+            </details>
+            <details>
+              <summary>ロゴがなくても大丈夫？</summary>
+              <p>問題ありません。屋号の文字だけでも体裁は整います。ロゴは後から足せます。無料のロゴ作成をAIに相談するのもありです。</p>
+            </details>
+            <details>
+              <summary>取引先ごとに条件が違うときは？</summary>
+              <p>指示書に「取引先ごとの特記」を書いておくか、その都度「今回は支払期限を◯日で」と伝えればOK。基本は指示書、例外はその場で、が使いやすいです。</p>
+            </details>
+          </div>
+
+          <div class="ad-slot">
+            <span class="ad-slot__label">スポンサーリンク</span>
+            <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <a class="next-card" href="seikyusho-05-kaikei-renkei.html">
+      <span><small>次の記事（第5回・有料 / 読み放題）</small><b>会計ソフト連携・CSVで受け渡し →</b></span>
+      <span class="btn btn--primary btn--sm">続きを見る</span>
+    </a>
+
+    <div class="sources">
+      <h4>参考・確認先</h4>
+      <p><a href="https://www.nta.go.jp/" target="_blank" rel="noopener">国税庁</a> ／ インボイス制度特設サイト。請求書の記載要件は公式の最新情報もご確認ください。</p>
+    </div>
+
+    <div class="article__foot">© 2026 Claude Recipe ／ 請求書シリーズ 第4回（有料）</div>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="../index.html">
+        <span class="brand__logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand__mark">Claude <b>Recipe</b></span>
+      </a>
+      <p class="copy">パソコンが苦手でも大丈夫。AIで暮らしと仕事の手間を減らす、やさしい実践サイト。</p>
+      <p class="foot-sister">姉妹サイト：<a href="https://zeebraweb.com" target="_blank" rel="noopener">SUBGRADE（動画編集の解説）</a></p>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col"><h4>READ</h4><a href="../articles.html">記事一覧</a><a href="../index.html#start">はじめての方へ</a></div>
+      <div class="foot-col"><h4>INFO</h4><a href="../about.html">このサイトについて</a><a href="../privacy.html">プライバシーポリシー</a><a href="../about.html#contact">お問い合わせ</a></div>
+      <div class="foot-col"><h4>FOLLOW</h4><a href="#">X（旧Twitter）</a><a href="#">note</a></div>
+    </div>
+  </div>
+  <div class="wrap"><p class="copy">© 2026 Claude Recipe</p></div>
+</footer>
+
+</body>
+</html>

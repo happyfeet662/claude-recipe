@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://happyfeet662.github.io/claude-recipe/articles/seikyusho-06-teiki.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1fbfa3">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Claude Recipe">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="Claude Codeで請求書（6）定期請求・リマインドの自動運用">
+<meta property="og:description" content="毎月同じ請求は、仕組みで回す。定期請求のひな型づくり、送り忘れを防ぐチェック、入金リマインドまで。毎月の締め作業を数分で終わらせる運用術。">
+<meta property="og:url" content="https://happyfeet662.github.io/claude-recipe/articles/seikyusho-06-teiki.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"Claude Codeで請求書（6）定期請求・リマインドの自動運用","inLanguage":"ja","author":{"@type":"Organization","name":"Claude Recipe編集部"},"publisher":{"@type":"Organization","name":"Claude Recipe"},"isAccessibleForFree":false,"mainEntityOfPage":"https://happyfeet662.github.io/claude-recipe/articles/seikyusho-06-teiki.html"}
+</script>
+<title>Claude Codeで請求書（6）定期請求・リマインドの自動運用 — Claude Recipe</title>
+<meta name="description" content="毎月同じ請求は、仕組みで回す。定期請求のひな型づくり、送り忘れを防ぐチェック、入金リマインドまで。毎月の締め作業を数分で終わらせる運用術。">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/copy.js"></script>
+<script src="../assets/paywall.js"></script>
+<!-- ▼ Google AdSense：サイト追加＆承認後にこの行を有効化
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5746304162931871" crossorigin="anonymous"></script>
+-->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand__logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand__mark">Claude <b>Recipe</b></span>
+    </a>
+    <nav class="nav">
+      <a href="../articles.html">記事一覧</a>
+      <a href="../index.html#start">はじめての方へ</a>
+      <a href="../about.html">このサイトは？</a>
+      <a class="btn btn--primary btn--sm" href="../index.html#follow">フォローする</a>
+    </nav>
+  </div>
+</header>
+
+<article class="article">
+  <div class="wrap">
+    <a class="article__back" href="../articles.html">← 記事一覧にもどる</a>
+
+    <div class="article__banner th-money">
+      <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="70" r="34" fill="#fff" stroke="#c9930f" stroke-width="4"/>
+        <path d="M100 52v18l12 8" stroke="#c9930f" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M100 36a34 34 0 0 1 30 18" stroke="#1fbfa3" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M128 46l4 10-11-2z" fill="#1fbfa3"/>
+        <path d="M150 30l2 7 7 2-7 2-2 7-2-7-7-2 7-2z" fill="#ffcb45"/>
+      </svg>
+    </div>
+
+    <div><span class="chip chip--money">お金・事務</span><span class="lvl-tag lvl-tag--intermediate">中級者</span><span class="lvl-tag lvl-tag--paid">有料</span></div>
+    <h1>Claude Codeで請求書（6）定期請求・リマインドの自動運用</h1>
+    <p class="article__lead">毎月きまった相手に、きまった金額を請求する——顧問料や継続案件、サブスクなど。これは「仕組みで回す」のが正解です。定期請求のひな型づくりから、送り忘れを防ぐチェック、入金のリマインドまで。<strong>毎月の締め作業を数分で終わらせる</strong>運用術です。</p>
+    <div class="article__meta">請求書シリーズ 第6回<span class="dot"></span>約11分<span class="dot"></span>有料 / 読み放題パス</div>
+
+    <div class="series">
+      <h4>請求書シリーズ（全6回）</h4>
+      <ol>
+        <li><a href="seikyusho-01-hajimete.html">はじめての請求書：まる投げで1枚つくる</a></li>
+        <li><a href="seikyusho-02-tsukini.html">毎月の請求書を自動で量産する</a></li>
+        <li><a href="seikyusho-03-mitsumori-nyukin.html">見積書・入金チェックまで</a></li>
+        <li><a href="seikyusho-04-template.html">テンプレ・屋号・ロゴを仕込む <span class="paid">有料</span></a></li>
+        <li><a href="seikyusho-05-kaikei-renkei.html">会計ソフト連携・CSVで受け渡し <span class="paid">有料</span></a></li>
+        <li class="is-current"><a href="seikyusho-06-teiki.html">定期請求・リマインドの自動運用 <span class="paid">有料</span></a></li>
+      </ol>
+      <p class="series__note">1〜3は無料。4以降は「請求書シリーズ 読み放題パス」でまとめて読めます。</p>
+    </div>
+
+    <div class="prose">
+      <h2>毎月同じ請求は、記憶に頼らない</h2>
+      <p>「今月ぶんの請求、出したっけ？」——この不安をなくすのが今回のゴール。毎月の請求は、<strong>ひな型（定期請求リスト）を1つ作っておき、毎月それを回すだけ</strong>にします。頭で覚えておく必要も、ゼロから作る必要もありません。</p>
+
+      <div class="callout">
+        <strong class="label">だいじな注意</strong>
+        Claude Code自体が「勝手に毎月自動送信する」わけではありません。あなたが月に一度お願いすると、そのつど請求書一式を用意してくれる、という運用です。送信前には金額・宛先を必ず確認してください。個人情報の取り扱いにもご注意を。
+      </div>
+
+      <div class="ad-slot">
+        <span class="ad-slot__label">スポンサーリンク</span>
+        <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+      </div>
+
+      <h3>この続き（有料）で分かること</h3>
+      <ul>
+        <li>「定期請求リスト」の作り方（毎月これを回すだけ）</li>
+        <li>月に一度の“締め”を数分で終わらせるお願い文</li>
+        <li>送り忘れ・請求もれを防ぐチェック</li>
+        <li>入金リマインドまで含めた毎月ルーティン</li>
+      </ul>
+
+      <div class="paywall" data-paywall="seikyu">
+
+        <div class="paywall__cta">
+          <div class="lockicon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="4.5" y="10.5" width="15" height="10" rx="3" fill="#fff" stroke="#c9930f" stroke-width="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" stroke="#c9930f" stroke-width="2" fill="none"/><circle cx="12" cy="15.5" r="1.6" fill="#c9930f"/></svg>
+          </div>
+          <h3>ここから先は「請求書 読み放題パス」で読めます</h3>
+          <p>請求書シリーズの第4回以降（定期請求・会計ソフト連携など）が、購入後まとめて読み放題になります。</p>
+          <ul class="paywall__perks">
+            <li>この記事の続きを全部読める</li>
+            <li>請求書の有料記事はこれからもすべて読み放題</li>
+            <li>買い切り・追加料金なし</li>
+          </ul>
+          <p class="paywall__price"><b>¥980</b> <span class="once">買い切り（税込）</span></p>
+          <!-- ▼ Stripe決済リンク（請求書パス用）。リダイレクト先＝
+               https://（あなたのサイト）/unlock.html?series=seikyu&to=articles/seikyusho-06-teiki.html -->
+          <div class="paywall__btn">
+            <a class="btn btn--primary btn--lg" href="https://buy.stripe.com/REPLACE_WITH_YOUR_LINK" rel="nofollow">購入して続きを読む</a>
+          </div>
+          <p class="paywall__note">お支払いはStripe（クレジットカード / Apple Pay / Google Pay）。購入後、この端末で自動的に読めるようになります。別の端末で読むときは、購入後に案内されるリンクをその端末でも開いてください。</p>
+        </div>
+
+        <div class="paywall__body">
+          <h2>まず「定期請求リスト」を1つ作る</h2>
+          <p>毎月請求する相手・内容・金額を、1つの表にまとめておきます。これが“毎月回すひな型”になります。項目はシンプルでOK。</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>取引先</th><th>内容</th><th>税抜金額</th><th>締め・支払</th></tr></thead>
+              <tbody>
+                <tr><th>（株）A</th><td>顧問料</td><td>50,000</td><td>月末締め・翌月末払い</td></tr>
+                <tr><th>（株）B</th><td>保守サポート</td><td>30,000</td><td>月末締め・翌月末払い</td></tr>
+                <tr><th>Cさん</th><td>月◯回の作業</td><td>都度</td><td>月末締め・翌月15日払い</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>このリストをClaude Codeに作ってもらい、請求書フォルダに置いておきましょう。</p>
+          <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">毎月きまって請求している相手をまとめた「定期請求リスト」を作ってください。列は「取引先・内容・税抜金額・締め日・支払期限・特記」。中身は次のとおりです。（ここに取引先を書く）。このファイルを請求書フォルダに保存して、今後は毎月これを見て請求書を作ってほしい、と分かるようにしてください。</pre></div>
+
+          <h2>毎月の“締め”は、この一言</h2>
+          <p>リストを作ったら、毎月やることはこれだけ。月初か月末に一度、送るだけです。</p>
+          <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">請求書フォルダの「定期請求リスト」と指示書を見て、今月分の請求書を全員分まとめて作ってください。発行日は今日、支払期限は各社の条件どおり、請求番号は前回の続きにしてください。金額が「都度」の相手だけ、今月の金額を私に確認してください。できたら1社ずつPDFにして保存し、送付用の一覧（取引先・金額・送付先）も作ってください。</pre></div>
+          <p class="prompt__how">これで毎月の請求書づくりは数分で完了。金額が変わる相手だけ確認してくれるので、抜けも防げます。</p>
+
+          <h2>送り忘れ・請求もれを防ぐ</h2>
+          <p>月末に、先月ぶんと今月ぶんを見比べて「出し忘れ」がないかもチェックできます。</p>
+          <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">定期請求リストと、今月フォルダに作った請求書を照らし合わせて、まだ作っていない（請求もれの）取引先がないか確認してください。あれば一覧にして教えてください。</pre></div>
+
+          <h2>入金リマインドまでルーティンに</h2>
+          <p>請求したら、月末には入金チェック（<a href="seikyusho-03-mitsumori-nyukin.html">第3回</a>参照）。未入金があれば、やわらかい確認メールの下書きまで一気に頼めます。これで「請求 → 入金確認 → リマインド」が毎月のルーティンとして回ります。</p>
+          <ul>
+            <li><strong>月初</strong>：定期請求リストで今月分をまとめて発行</li>
+            <li><strong>月末</strong>：通帳と突き合わせて入金チェック</li>
+            <li><strong>未入金</strong>：確認メールの下書き → 自分で確認して送信</li>
+          </ul>
+
+          <div class="callout">
+            <strong class="label">請求書シリーズ 完結</strong>
+            作る → 量産 → 見積・入金 → テンプレ → 会計連携 → 定期運用。これで請求まわりは「毎月ほぼ自動」になりました。おつかれさまでした。ここで作った売上データは、そのまま確定申告シリーズにつながります。
+          </div>
+
+          <div class="faq">
+            <details>
+              <summary>本当に「自動」で毎月送られるの？</summary>
+              <p>Claude Codeが勝手に送信するわけではありません。あなたが月に一度お願いすると、請求書一式を用意してくれる仕組みです。送信は内容を確認してからご自身で。とはいえ「作る手間」はほぼゼロになります。</p>
+            </details>
+            <details>
+              <summary>毎月やるのを忘れそうです。</summary>
+              <p>スマホのカレンダーやリマインダーに「毎月◯日：請求」を登録しておきましょう。通知が来たら、上の“締め”の一言を送るだけ。習慣にすればもう忘れません。</p>
+            </details>
+            <details>
+              <summary>金額が毎月違う相手がいます。</summary>
+              <p>リストで「都度」にしておけば、その相手だけ今月の金額を確認してくれます。固定の相手はそのまま、変動の相手だけ入力、という運用がラクです。</p>
+            </details>
+          </div>
+
+          <div class="ad-slot">
+            <span class="ad-slot__label">スポンサーリンク</span>
+            <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <a class="next-card" href="kakuteishinkoku-01-junbi.html">
+      <span><small>あわせて読みたい（無料）</small><b>確定申告シリーズ：まず何を準備する？ →</b></span>
+      <span class="btn btn--primary btn--sm">読んでみる</span>
+    </a>
+
+    <div class="sources">
+      <h4>参考・確認先</h4>
+      <p><a href="https://www.nta.go.jp/" target="_blank" rel="noopener">国税庁</a>。請求書・帳簿の保存や記載要件は公式の最新情報もご確認ください。</p>
+    </div>
+
+    <div class="article__foot">© 2026 Claude Recipe ／ 請求書シリーズ 第6回（有料）</div>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="../index.html">
+        <span class="brand__logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand__mark">Claude <b>Recipe</b></span>
+      </a>
+      <p class="copy">パソコンが苦手でも大丈夫。AIで暮らしと仕事の手間を減らす、やさしい実践サイト。</p>
+      <p class="foot-sister">姉妹サイト：<a href="https://zeebraweb.com" target="_blank" rel="noopener">SUBGRADE（動画編集の解説）</a></p>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col"><h4>READ</h4><a href="../articles.html">記事一覧</a><a href="../index.html#start">はじめての方へ</a></div>
+      <div class="foot-col"><h4>INFO</h4><a href="../about.html">このサイトについて</a><a href="../privacy.html">プライバシーポリシー</a><a href="../about.html#contact">お問い合わせ</a></div>
+      <div class="foot-col"><h4>FOLLOW</h4><a href="#">X（旧Twitter）</a><a href="#">note</a></div>
+    </div>
+  </div>
+  <div class="wrap"><p class="copy">© 2026 Claude Recipe</p></div>
+</footer>
+
+</body>
+</html>
