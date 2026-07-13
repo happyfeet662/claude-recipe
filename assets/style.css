@@ -454,6 +454,11 @@ a.card:hover h3 { color: var(--brand); }
    Paywall（途中から有料）
    ========================================================= */
 .paywall { position: relative; margin: 10px 0 0; }
+.freebanner {
+  background: #d9f5ec; border: 1px solid #b8e8da; color: #139e86;
+  font-family: var(--maru); font-weight: 700; font-size: 14px; text-align: center;
+  padding: 12px 16px; border-radius: 12px; margin: 0 0 24px; box-shadow: 0 3px 0 #c3ede1;
+}
 .paywall__body { display: none; }
 .paywall.is-unlocked .paywall__body { display: block; }
 .paywall.is-unlocked .paywall__cta { display: none; }
