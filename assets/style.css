@@ -83,8 +83,15 @@ h1, h2, h3, .maru { font-family: var(--maru); }
 .nav a:hover { color: var(--brand); }
 
 @media (max-width: 700px) {
-  .nav { gap: 14px; }
+  .site-header .wrap { height: 60px; }
+  .brand { gap: 7px; }
+  .brand__logo { width: 28px; height: 28px; }
+  .brand__mark { font-size: 15px; white-space: nowrap; }
+  .nav { gap: 10px; margin-left: 10px; }
   .nav a:not(.btn) { display: none; }
+  /* スマホでも「記事一覧」だけは必ず出す（見つけやすさ優先） */
+  .nav a:not(.btn):first-child { display: inline; font-weight: 700; color: var(--brand); font-size: 13px; white-space: nowrap; }
+  .btn--sm { padding: 8px 13px; font-size: 12.5px; white-space: nowrap; }
 }
 
 /* ---------- Buttons (chunky candy) ---------- */
