@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://happyfeet662.github.io/claude-recipe/articles/kakuteishinkoku-05-shohizei.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1fbfa3">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Claude Recipe">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="Claude Codeで確定申告（5）消費税・インボイス編">
+<meta property="og:description" content="インボイス制度で消費税の申告が必要になった小規模事業者向け。2割特例・適格請求書の要件・Claude Codeでの集計まで。読み放題パスで読めます。">
+<meta property="og:url" content="https://happyfeet662.github.io/claude-recipe/articles/kakuteishinkoku-05-shohizei.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"Claude Codeで確定申告（5）消費税・インボイス編","inLanguage":"ja","author":{"@type":"Organization","name":"Claude Recipe編集部"},"publisher":{"@type":"Organization","name":"Claude Recipe"},"isAccessibleForFree":false,"mainEntityOfPage":"https://happyfeet662.github.io/claude-recipe/articles/kakuteishinkoku-05-shohizei.html"}
+</script>
+<title>Claude Codeで確定申告（5）消費税・インボイス編 — Claude Recipe</title>
+<meta name="description" content="インボイス制度で消費税の申告が必要になった小規模事業者向け。2割特例・適格請求書の要件・Claude Codeでの集計まで。読み放題パスで読めます。">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/copy.js"></script>
+<script src="../assets/paywall.js"></script>
+<!-- ▼ Google AdSense：サイト追加＆承認後にこの行を有効化
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5746304162931871" crossorigin="anonymous"></script>
+-->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand__logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand__mark">Claude <b>Recipe</b></span>
+    </a>
+    <nav class="nav">
+      <a href="../articles.html">記事一覧</a>
+      <a href="../index.html#start">はじめての方へ</a>
+      <a href="../about.html">このサイトは？</a>
+      <a class="btn btn--primary btn--sm" href="../index.html#follow">フォローする</a>
+    </nav>
+  </div>
+</header>
+
+<article class="article">
+  <div class="wrap">
+    <a class="article__back" href="../articles.html">← 記事一覧にもどる</a>
+
+    <div class="article__banner th-money">
+      <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+        <rect x="46" y="30" width="80" height="80" rx="8" fill="#fff" stroke="#c9930f" stroke-width="4"/>
+        <rect x="58" y="44" width="40" height="6" rx="3" fill="#ffcb45"/>
+        <rect x="58" y="58" width="56" height="5" rx="2.5" fill="#f0e0b0"/>
+        <rect x="58" y="70" width="56" height="5" rx="2.5" fill="#f0e0b0"/>
+        <rect x="58" y="82" width="36" height="5" rx="2.5" fill="#f0e0b0"/>
+        <circle cx="140" cy="94" r="20" fill="#e9f8f3" stroke="#1fbfa3" stroke-width="4"/>
+        <text x="140" y="101" text-anchor="middle" font-family="'Hiragino Maru Gothic ProN',sans-serif" font-size="18" font-weight="700" fill="#1fbfa3">%</text>
+      </svg>
+    </div>
+
+    <div><span class="chip chip--money">お金・事務</span><span class="lvl-tag lvl-tag--intermediate">中級者</span><span class="lvl-tag lvl-tag--paid">有料</span></div>
+    <h1>Claude Codeで確定申告（5）消費税・インボイス編</h1>
+    <p class="article__lead">インボイス制度をきっかけに「消費税も申告することになった」という小規模事業者が増えています。むずかしそうな消費税の申告を、2割特例やインボイスの要件から、Claude Codeでの集計までやさしく整理します。</p>
+    <div class="article__meta">確定申告シリーズ 第5回<span class="dot"></span>約13分<span class="dot"></span>有料 / 読み放題パス</div>
+
+    <div class="series">
+      <h4>確定申告シリーズ（全7回）</h4>
+      <ol>
+        <li><a href="kakuteishinkoku-01-junbi.html">準備編：まず何を準備する？</a></li>
+        <li><a href="kakuteishinkoku-02-keihi.html">経費編：経費とレシートを集計する</a></li>
+        <li><a href="kakuteishinkoku-03-teishutsu.html">提出編：申告書をつくって提出する</a></li>
+        <li><a href="kakuteishinkoku-04-aoiro.html">青色申告65万円控除 実践編 <span class="paid">有料</span></a></li>
+        <li class="is-current"><a href="kakuteishinkoku-05-shohizei.html">消費税・インボイス編 <span class="paid">有料</span></a></li>
+        <li><a href="kakuteishinkoku-06-setsuzei.html">節税・控除の深掘り編 <span class="paid">有料</span></a></li>
+        <li><a href="kakuteishinkoku-07-tsumazuki.html">つまずき解決・修正申告編 <span class="paid">有料</span></a></li>
+      </ol>
+      <p class="series__note">1〜3は無料。4以降は「確定申告シリーズ 読み放題パス」でまとめて読めます。</p>
+    </div>
+
+    <div class="prose">
+      <h2>そもそも、消費税の申告が必要な人は？</h2>
+      <p>所得税の確定申告とは別に、条件に当てはまる人は<strong>消費税の申告</strong>もします。ざっくり、次のどちらかに当てはまる人です。</p>
+      <ul>
+        <li>2年前（基準期間）の課税売上が1,000万円を超えている人</li>
+        <li>インボイス制度に登録して<strong>適格請求書発行事業者</strong>になった人（売上が少なくても対象になります）</li>
+      </ul>
+      <p>特に増えているのが2つ目。取引先から求められてインボイス登録をした結果、これまで消費税と無縁だった小規模事業者も申告することになった、というケースです。</p>
+
+      <div class="callout">
+        <strong class="label">だいじな注意</strong>
+        消費税は制度が細かく、選んだ計算方法（本則・簡易・2割特例）や登録状況で結果が変わります。この記事は考え方の入り口です。適用可否と金額は、国税庁の情報や税理士さんに必ず確認してください。
+      </div>
+
+      <div class="ad-slot">
+        <span class="ad-slot__label">スポンサーリンク</span>
+        <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+      </div>
+
+      <h3>この続き（有料）で分かること</h3>
+      <ul>
+        <li>「2割特例」で計算をぐっとラクにする方法</li>
+        <li>本則課税と簡易課税の違い、選び方の目安</li>
+        <li>適格請求書（インボイス）に必要な記載事項</li>
+        <li>Claude Codeで売上の消費税を集計し、請求書の要件をチェックする例文</li>
+      </ul>
+
+      <div class="paywall" data-paywall="zeitax">
+
+        <div class="paywall__cta">
+          <div class="lockicon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="4.5" y="10.5" width="15" height="10" rx="3" fill="#fff" stroke="#c9930f" stroke-width="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" stroke="#c9930f" stroke-width="2" fill="none"/><circle cx="12" cy="15.5" r="1.6" fill="#c9930f"/></svg>
+          </div>
+          <h3>ここから先は「読み放題パス」で読めます</h3>
+          <p>確定申告シリーズの第4回以降（消費税・節税など）が、購入後まとめて読み放題になります。</p>
+          <ul class="paywall__perks">
+            <li>この記事の続きを全部読める</li>
+            <li>確定申告の有料記事はこれからもすべて読み放題</li>
+            <li>買い切り・追加料金なし</li>
+          </ul>
+          <p class="paywall__price"><b>¥980</b> <span class="once">買い切り（税込）</span></p>
+          <!-- ▼ Stripe決済リンクを作成し、下の href を差し替えてください。
+               Stripe側の「支払い後のリダイレクト先」を
+               https://（あなたのサイト）/unlock.html?series=zeitax&to=articles/kakuteishinkoku-05-shohizei.html
+               に設定すると、購入後に自動で解錠されます。 -->
+          <div class="paywall__btn">
+            <a class="btn btn--primary btn--lg" href="https://buy.stripe.com/REPLACE_WITH_YOUR_LINK" rel="nofollow">購入して続きを読む</a>
+          </div>
+          <p class="paywall__note">お支払いはStripe（クレジットカード / Apple Pay / Google Pay）。購入後、この端末で自動的に読めるようになります。別の端末で読むときは、購入後に案内されるリンクをその端末でも開いてください。</p>
+        </div>
+
+        <div class="paywall__body">
+          <h2>まず「2割特例」を知っておく</h2>
+          <p>インボイス登録をきっかけに課税事業者になった人は、当面のあいだ<strong>2割特例</strong>という簡単な計算が使えることがあります。これは、受け取った消費税（売上の消費税）の<strong>2割だけを納める</strong>という方法です。仕入や経費の消費税を一つひとつ集計しなくてよいので、手間も納税額も抑えやすいのが特長です。</p>
+          <p>たとえば売上にかかる消費税が年間30万円なら、納めるのはその2割＝6万円、という考え方です（対象期間や条件があります。使えるかは必ず確認してください）。</p>
+
+          <h2>本則課税と簡易課税のちがい</h2>
+          <p>2割特例を使わない場合は、次のどちらかで計算します。</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>方式</th><th>ざっくりの計算</th><th>向いている人</th></tr></thead>
+              <tbody>
+                <tr><th>本則課税</th><td>受け取った消費税 − 払った消費税</td><td>仕入や経費が多い人</td></tr>
+                <tr><th>簡易課税</th><td>受け取った消費税 × 業種ごとの割合</td><td>仕入が少ない・記帳を簡単にしたい人（要事前届出）</td></tr>
+                <tr><th>2割特例</th><td>受け取った消費税 × 2割</td><td>インボイス登録で課税事業者になった人（当面）</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>「自分はどれが得か」は売上や経費の構成で変わります。Claude Codeに数字を伝えて、それぞれの方式での納税額をざっくり比べてもらうと、判断の材料になります（最終判断は要確認）。</p>
+
+          <h2>インボイス（適格請求書）に必要なこと</h2>
+          <p>適格請求書発行事業者になったら、発行する請求書に決められた項目を載せる必要があります。おもな必須項目はこちらです。</p>
+          <ul>
+            <li>発行者の氏名・名称と<strong>登録番号（T＋13桁）</strong></li>
+            <li>取引年月日、取引内容（軽減税率の対象ならその旨）</li>
+            <li>税率ごとに分けた合計額と<strong>適用税率</strong></li>
+            <li>税率ごとの<strong>消費税額</strong></li>
+            <li>受け取る相手の氏名・名称</li>
+          </ul>
+
+          <h2>Claude Codeでの集計とチェック</h2>
+          <p>消費税まわりでも、集計と確認はAIが得意です。</p>
+          <ol class="steps">
+            <li><strong>売上の消費税を集計</strong>売上データを渡し、税率（10%・8%）ごとに分けて消費税額を出してもらう。</li>
+            <li><strong>2割特例での納税額を試算</strong>「売上の消費税の2割」を計算してもらい、目安をつかむ。</li>
+            <li><strong>請求書の要件チェック</strong>自分が発行した請求書を渡し、インボイスの必須項目が抜けていないか確認してもらう。</li>
+            <li><strong>自分で最終確認</strong>登録番号や税率の正しさは、必ず自分の目でも確かめる。</li>
+          </ol>
+
+          <h3>そのまま使えるお願いの例文</h3>
+          <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">この売上データ（日付・金額・税率）を、税率10%と8%に分けて、それぞれの税抜金額と消費税額を合計してください。そのうえで、消費税の「2割特例」で納める金額の目安も計算してください。</pre></div>
+          <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">この請求書に、インボイス（適格請求書）の必須項目（登録番号、税率ごとの合計と消費税額、適用税率など）がそろっているか確認し、足りない項目があれば指摘してください。</pre></div>
+
+          <div class="callout">
+            <strong class="label">気をつけたいこと</strong>
+            消費税の計算方式は、一度選ぶと一定期間変えられないものもあります。届出の期限や条件があるので、方式を決める前に必ず公式情報・専門家で確認しましょう。AIの試算は「あたりをつける」用途に。
+          </div>
+
+          <div class="faq">
+            <details>
+              <summary>インボイス登録は必ずした方がいい？</summary>
+              <p>取引先が課税事業者で仕入税額控除を求める場合は、登録すると取引を続けやすくなります。一方で登録すると消費税の申告・納税が発生します。取引先の状況と手取りへの影響を見て判断しましょう（迷ったら専門家へ）。</p>
+            </details>
+            <details>
+              <summary>2割特例はいつまで使えますか？</summary>
+              <p>対象となる期間や条件が定められています。年によって扱いが変わることもあるため、その年に使えるかは国税庁の最新情報で確認してください。</p>
+            </details>
+            <details>
+              <summary>消費税の申告も期限は同じ？</summary>
+              <p>個人事業主の消費税の申告・納付期限は、所得税の確定申告とは別に定められています（例年3月末ごろ）。所得税と混同しないよう、両方の期限を押さえておきましょう。</p>
+            </details>
+          </div>
+
+          <div class="ad-slot">
+            <span class="ad-slot__label">スポンサーリンク</span>
+            <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <a class="next-card" href="kakuteishinkoku-06-setsuzei.html">
+      <span><small>次の記事（第6回・有料 / 読み放題）</small><b>節税・控除の深掘り編 →</b></span>
+      <span class="btn btn--primary btn--sm">続きを見る</span>
+    </a>
+
+    <div class="sources">
+      <h4>参考・確認先</h4>
+      <p><a href="https://www.nta.go.jp/" target="_blank" rel="noopener">国税庁</a> ／ インボイス制度特設サイト。制度・特例の要件は必ず公式の最新情報でご確認ください。</p>
+    </div>
+
+    <div class="article__foot">© 2026 Claude Recipe ／ 確定申告シリーズ 第5回（有料）</div>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="../index.html">
+        <span class="brand__logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand__mark">Claude <b>Recipe</b></span>
+      </a>
+      <p class="copy">パソコンが苦手でも大丈夫。AIで暮らしと仕事の手間を減らす、やさしい実践サイト。</p>
+      <p class="foot-sister">姉妹サイト：<a href="https://zeebraweb.com" target="_blank" rel="noopener">SUBGRADE（動画編集の解説）</a></p>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col"><h4>READ</h4><a href="../articles.html">記事一覧</a><a href="../index.html#start">はじめての方へ</a></div>
+      <div class="foot-col"><h4>INFO</h4><a href="../about.html">このサイトについて</a><a href="../privacy.html">プライバシーポリシー</a><a href="../about.html#contact">お問い合わせ</a></div>
+      <div class="foot-col"><h4>FOLLOW</h4><a href="#">X（旧Twitter）</a><a href="#">note</a></div>
+    </div>
+  </div>
+  <div class="wrap"><p class="copy">© 2026 Claude Recipe</p></div>
+</footer>
+
+</body>
+</html>

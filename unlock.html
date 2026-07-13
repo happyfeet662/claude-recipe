@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1fbfa3">
+<title>読み放題パスを有効にしました — Claude Recipe</title>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/paywall.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand__logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand__mark">Claude <b>Recipe</b></span>
+    </a>
+  </div>
+</header>
+
+<section class="section" style="text-align:center">
+  <div class="wrap" style="max-width:620px">
+    <div id="okBox">
+      <div style="line-height:0;margin-bottom:18px">
+        <svg width="88" height="88" viewBox="0 0 88 88" fill="none" aria-hidden="true">
+          <circle cx="44" cy="44" r="30" fill="#d9f5ec" stroke="#1fbfa3" stroke-width="4"/>
+          <path d="M33 45l7 7 15-16" stroke="#1fbfa3" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h1 style="font-size:clamp(22px,4vw,30px);margin:0 0 12px">読み放題パスを有効にしました</h1>
+      <p style="color:var(--ink-soft);margin:0 0 26px">ご購入ありがとうございます。この端末で、対象シリーズの有料記事がすべて読めるようになりました。</p>
+      <a id="backBtn" class="btn btn--primary btn--lg" href="articles.html">記事の続きを読む</a>
+      <p class="paywall__note" style="margin-top:22px">
+        ※パスはこの端末（ブラウザ）に保存されます。スマホとパソコンなど別の端末でも読みたいときは、購入後に届くこのページのリンクを、その端末でもう一度開いてください。
+      </p>
+    </div>
+    <div id="ngBox" style="display:none">
+      <h1 style="font-size:clamp(22px,4vw,30px);margin:0 0 12px">リンクが正しくありません</h1>
+      <p style="color:var(--ink-soft);margin:0 0 26px">解錠に必要な情報が見つかりませんでした。お手数ですが、購入後に表示されたリンクからもう一度お進みください。</p>
+      <a class="btn btn--primary btn--lg" href="index.html">トップにもどる</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  function param(k){
+    var m = new RegExp('[?&]'+k+'=([^&]+)').exec(location.search);
+    return m ? decodeURIComponent(m[1]) : '';
+  }
+  var series = param('series');   // 例：zeitax
+  var to = param('to');           // 戻り先（任意）例：articles/kakuteishinkoku-04-aoiro.html
+  if (series && window.CRPaywall) {
+    window.CRPaywall.grant(series);
+    if (to) {
+      // 安全のため同一サイト内の相対パスのみ許可
+      if (!/^https?:|^\/\//.test(to)) {
+        document.getElementById('backBtn').setAttribute('href', to);
+      }
+    }
+  } else {
+    document.getElementById('okBox').style.display = 'none';
+    document.getElementById('ngBox').style.display = 'block';
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://happyfeet662.github.io/claude-recipe/articles/kakuteishinkoku-02-keihi.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1fbfa3">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Claude Recipe">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="Claude Codeで確定申告（2）経費とレシートを集計する">
+<meta property="og:description" content="何が経費になる？レシートや通帳・カード明細をClaude Codeで勘定科目ごとに集計する手順と、そのままコピペで使えるお願いの例文つき。">
+<meta property="og:url" content="https://happyfeet662.github.io/claude-recipe/articles/kakuteishinkoku-02-keihi.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"Claude Codeで確定申告（2）経費とレシートを集計する","inLanguage":"ja","author":{"@type":"Organization","name":"Claude Recipe編集部"},"publisher":{"@type":"Organization","name":"Claude Recipe"},"mainEntityOfPage":"https://happyfeet662.github.io/claude-recipe/articles/kakuteishinkoku-02-keihi.html"}
+</script>
+<title>Claude Codeで確定申告（2）経費とレシートを集計する — Claude Recipe</title>
+<meta name="description" content="何が経費になる？レシートや通帳・カード明細をClaude Codeで勘定科目ごとに集計する手順と、そのままコピペで使えるお願いの例文つき。">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/copy.js"></script>
+<!-- ▼ Google AdSense：サイト追加＆承認後にこの行を有効化
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5746304162931871" crossorigin="anonymous"></script>
+-->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand__logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand__mark">Claude <b>Recipe</b></span>
+    </a>
+    <nav class="nav">
+      <a href="../articles.html">記事一覧</a>
+      <a href="../index.html#start">はじめての方へ</a>
+      <a href="../about.html">このサイトは？</a>
+      <a class="btn btn--primary btn--sm" href="../index.html#follow">フォローする</a>
+    </nav>
+  </div>
+</header>
+
+<article class="article">
+  <div class="wrap">
+    <a class="article__back" href="../articles.html">← 記事一覧にもどる</a>
+
+    <div class="article__banner th-money">
+      <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+        <rect x="30" y="40" width="52" height="66" rx="6" fill="#fff" stroke="#c9930f" stroke-width="4"/>
+        <rect x="40" y="52" width="32" height="5" rx="2.5" fill="#f0e0b0"/>
+        <rect x="40" y="62" width="32" height="5" rx="2.5" fill="#f0e0b0"/>
+        <rect x="40" y="72" width="24" height="5" rx="2.5" fill="#f0e0b0"/>
+        <path d="M92 70h20m0 0l-6-5m6 5l-6 5" stroke="#9aa5b1" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="122" y="44" width="56" height="58" rx="8" fill="#e9f8f3" stroke="#1fbfa3" stroke-width="4"/>
+        <rect x="134" y="56" width="20" height="6" rx="3" fill="#1fbfa3"/>
+        <rect x="134" y="68" width="32" height="5" rx="2.5" fill="#8fe0d1"/>
+        <rect x="134" y="78" width="32" height="5" rx="2.5" fill="#8fe0d1"/>
+        <rect x="134" y="88" width="24" height="5" rx="2.5" fill="#8fe0d1"/>
+      </svg>
+    </div>
+
+    <div><span class="chip chip--money">お金・事務</span><span class="lvl-tag lvl-tag--beginner">初心者</span></div>
+    <h1>Claude Codeで確定申告（2）経費とレシートを集計する</h1>
+    <p class="article__lead">確定申告でいちばん面倒なのが、経費の集計と利益の計算です。でも大丈夫。<strong>整理しなくていい、計算もしなくていい。</strong>請求書やレシートをフォルダに放り込んで「探して・読んで・計算して」とお願いするだけ。数字が苦手な人でもできる、いちばんラクなやり方を紹介します。</p>
+    <div class="article__meta">確定申告シリーズ 第2回<span class="dot"></span>約11分<span class="dot"></span>初心者向け</div>
+
+    <div class="series">
+      <h4>確定申告シリーズ（全7回）</h4>
+      <ol>
+        <li><a href="kakuteishinkoku-01-junbi.html">準備編：まず何を準備する？</a></li>
+        <li class="is-current"><a href="kakuteishinkoku-02-keihi.html">経費編：経費とレシートを集計する</a></li>
+        <li><a href="kakuteishinkoku-03-teishutsu.html">提出編：申告書をつくって提出する</a></li>
+        <li><a href="kakuteishinkoku-04-aoiro.html">青色申告65万円控除 実践編 <span class="paid">有料</span></a></li>
+        <li><a href="kakuteishinkoku-05-shohizei.html">消費税・インボイス編 <span class="paid">有料</span></a></li>
+        <li><a href="kakuteishinkoku-06-setsuzei.html">節税・控除の深掘り編 <span class="paid">有料</span></a></li>
+        <li><a href="kakuteishinkoku-07-tsumazuki.html">つまずき解決・修正申告編 <span class="paid">有料</span></a></li>
+      </ol>
+      <p class="series__note">1〜3は無料で読めます。4以降は「確定申告シリーズ 読み放題パス」で読めます。</p>
+    </div>
+
+    <div class="prose">
+      <h2>そもそも「経費」ってなに？</h2>
+      <p>経費とは、<strong>仕事のために使ったお金</strong>のこと。売上から経費を引いた残りが「もうけ（所得）」で、税金はこのもうけにかかります。つまり、正しく経費を集計するほど、払いすぎを防げます。</p>
+
+      <div class="callout">
+        <strong class="label">だいじな注意</strong>
+        何が経費になるかは、仕事の内容によって変わります。この記事は一般的な考え方の紹介です。判断に迷うものは、国税庁の情報や税理士さんに確認してください。明細には個人情報が含まれます。AIに渡す前に、口座番号やカード番号など不要な情報は消しておくと安心です。
+      </div>
+
+      <h2>よくある経費の科目（勘定科目）</h2>
+      <p>集計するときは「科目」というグループに分けます。代表的なものだけ知っておけば十分です。</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>科目</th><th>どんな支出？</th></tr></thead>
+          <tbody>
+            <tr><th>消耗品費</th><td>文房具、10万円未満の備品、細かい道具など</td></tr>
+            <tr><th>通信費</th><td>ネット回線、スマホ代（仕事で使う分）</td></tr>
+            <tr><th>旅費交通費</th><td>電車・バス・タクシー、出張の交通費</td></tr>
+            <tr><th>接待交際費</th><td>仕事の打ち合わせの飲食、手土産など</td></tr>
+            <tr><th>水道光熱費</th><td>自宅兼事務所の電気代など（仕事の割合分）</td></tr>
+            <tr><th>支払手数料</th><td>振込手数料、各種サービスの利用料</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>自宅で仕事をしている人は、家賃や電気代のうち「仕事で使っている割合」だけを経費にできます（家事按分）。割合の考え方も、あとでClaude Codeに相談できます。</p>
+
+      <div class="ad-slot">
+        <span class="ad-slot__label">スポンサーリンク</span>
+        <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+      </div>
+
+      <h2>整理はしなくてOK。フォルダに放り込むだけ</h2>
+      <p>「表を作らなきゃ」「きれいに並べなきゃ」——そんな準備はいりません。請求書・レシート・領収書を、<strong>1つのフォルダにバラバラのまま入れておくだけ</strong>。PDFでも、スマホで撮った写真でも、スクショでも大丈夫です。あとはClaude Codeが<strong>探して・読み取って・計算まで</strong>ぜんぶやってくれます。</p>
+      <p>数字が苦手でも、整理が苦手でも問題ありません。あなたがやるのは「フォルダに入れる」と「お願いする」の2つだけ。<strong>自分で電卓をたたく必要はありません。</strong></p>
+
+      <div class="callout">
+        <strong class="label">ズボラでも大丈夫</strong>
+        ファイル名がバラバラでも、種類（PDF・画像・スクショ）が混ざっていても、フォルダの中で散らかっていてもOK。「探して、読んで、計算して」とお願いすれば、AIがそのまま進めてくれます。
+      </div>
+
+      <h2>フォルダごと渡して、まるっと計算してもらう</h2>
+      <ol class="steps">
+        <li><strong>フォルダに放り込む</strong>請求書やレシートを、1つのフォルダにまとめて入れるだけ。ファイル名も並び順もバラバラでOK。</li>
+        <li><strong>そのフォルダをClaude Codeに渡す</strong>フォルダを開いた状態で話しかけるか、フォルダの場所を伝えます。</li>
+        <li><strong>「探して・読んで・計算して」とお願いする</strong>下のお願い文をコピーして送るだけ。売上・経費・もうけ（利益）まで出してくれます。</li>
+        <li><strong>あやしい所だけ確認</strong>「要確認」に分けてくれた項目や、読み取れなかったファイルだけ、最後にあなたがチェックします。</li>
+      </ol>
+
+      <h3>いちばんズボラで使えるお願い文（利益まで一発）</h3>
+      <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">デスクトップの「請求書」フォルダの中に、請求書やレシートがバラバラに入っています（PDF・写真・スクショが混ざっていてもOKです）。中身をぜんぶ探して読み取り、今年の売上の合計・経費の合計・その差し引き（もうけ＝利益）を計算してください。整理もファイル名の変更もしていません。読み取れなかったものや、経費か迷うものがあれば、最後に教えてください。</pre></div>
+      <p class="prompt__how">フォルダの名前や場所（例：「デスクトップの請求書フォルダ」）を、自分の環境に書きかえて送ってください。自分で売上や利益を計算する必要はありません。</p>
+
+      <p>「うちのどこに入れたか、自分でもよくわからない…」という人は、こちらでも大丈夫です。</p>
+      <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">私のパソコンの中に、請求書やレシートのファイルが入ったフォルダがあるはずですが、場所がはっきりわかりません。それらしいフォルダを探して、見つかったら中身を読み取り、今年の売上・経費・もうけ（利益）を計算してください。どこのフォルダを使ったかも教えてください。</pre></div>
+
+      <h3>もっと細かく、科目ごとに分けたいとき</h3>
+      <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">このフォルダにある請求書やレシートを全部読み込んで、支出を「消耗品費・通信費・旅費交通費・接待交際費・水道光熱費・支払手数料・その他」に仕分けし、科目ごとの合計金額を表にしてください。プライベートの出費と迷うものは、判断せず「要確認」として別にまとめてください。</pre></div>
+      <p>プライベートと仕事が混ざっていても、いったん「要確認」に分けてくれるので、あとから自分でチェックできます。</p>
+
+      <h2>ためこまないのが最大のコツ</h2>
+      <p>1年ぶんを一度にやると大変です。<strong>月に1回、その月の明細をまとめてClaude Codeに集計してもらう</strong>クセをつけると、確定申告の時期がとてもラクになります。カレンダーに「経費の日」を作っておくのがおすすめです。</p>
+
+      <div class="faq">
+        <details>
+          <summary>ファイルがPDFや写真でも大丈夫？表にしなくていい？</summary>
+          <p>大丈夫です。PDFの請求書も、スマホで撮ったレシートの写真も、スクショも、そのままフォルダに入れておけばClaude Codeが読み取ります。自分で表やCSVを作る必要はありません。通帳やカードの明細をCSVでダウンロードできる場合は、それも一緒に入れておくとより正確になります。</p>
+        </details>
+        <details>
+          <summary>プライベートと仕事が同じカードで混ざっています。</summary>
+          <p>例文のように「迷うものは要確認に分けて」と頼めば、AIが勝手に判断せず仕分けしてくれます。可能なら来年からは仕事用の口座やカードを分けると、集計がさらにラクになります。</p>
+        </details>
+        <details>
+          <summary>家賃や電気代はどこまで経費にできますか？</summary>
+          <p>自宅兼事務所なら「仕事で使っている割合」の分だけを経費にできます（家事按分）。割合の決め方は仕事の実態によります。Claude Codeに使い方を説明して相談しつつ、最終的な割合は無理のない根拠で決めましょう。</p>
+        </details>
+      </div>
+
+      <div class="ad-slot">
+        <span class="ad-slot__label">スポンサーリンク</span>
+        <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+      </div>
+    </div>
+
+    <a class="next-card" href="kakuteishinkoku-03-teishutsu.html">
+      <span><small>次の記事（第3回・無料）</small><b>申告書をつくって提出する →</b></span>
+      <span class="btn btn--primary btn--sm">つづきを読む</span>
+    </a>
+
+    <div class="sources">
+      <h4>参考・確認先</h4>
+      <p><a href="https://www.nta.go.jp/" target="_blank" rel="noopener">国税庁</a>。勘定科目や家事按分の考え方は、最新の公式情報もあわせてご確認ください。</p>
+    </div>
+
+    <div class="article__foot">© 2026 Claude Recipe ／ 確定申告シリーズ 第2回</div>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="../index.html">
+        <span class="brand__logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand__mark">Claude <b>Recipe</b></span>
+      </a>
+      <p class="copy">パソコンが苦手でも大丈夫。AIで暮らしと仕事の手間を減らす、やさしい実践サイト。</p>
+      <p class="foot-sister">姉妹サイト：<a href="https://zeebraweb.com" target="_blank" rel="noopener">SUBGRADE（動画編集の解説）</a></p>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col"><h4>READ</h4><a href="../articles.html">記事一覧</a><a href="../index.html#start">はじめての方へ</a></div>
+      <div class="foot-col"><h4>INFO</h4><a href="../about.html">このサイトについて</a><a href="../privacy.html">プライバシーポリシー</a><a href="../about.html#contact">お問い合わせ</a></div>
+      <div class="foot-col"><h4>FOLLOW</h4><a href="#">X（旧Twitter）</a><a href="#">note</a></div>
+    </div>
+  </div>
+  <div class="wrap"><p class="copy">© 2026 Claude Recipe</p></div>
+</footer>
+
+</body>
+</html>

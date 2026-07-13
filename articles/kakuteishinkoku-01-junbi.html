@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://happyfeet662.github.io/claude-recipe/articles/kakuteishinkoku-01-junbi.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1fbfa3">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Claude Recipe">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="Claude Codeで確定申告（1）まず何を準備する？">
+<meta property="og:description" content="経費も利益も確定申告も、何もわからなくて大丈夫。請求書やレシートをフォルダに入れて“全部おまかせ”の文を送るだけ。売上・経費・利益の計算までAIに丸投げする方法を、いちばんやさしく解説します。">
+<meta property="og:url" content="https://happyfeet662.github.io/claude-recipe/articles/kakuteishinkoku-01-junbi.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"Claude Codeで確定申告（1）まず何を準備する？","inLanguage":"ja","author":{"@type":"Organization","name":"Claude Recipe編集部"},"publisher":{"@type":"Organization","name":"Claude Recipe"},"mainEntityOfPage":"https://happyfeet662.github.io/claude-recipe/articles/kakuteishinkoku-01-junbi.html"}
+</script>
+<title>Claude Codeで確定申告（1）まず何を準備する？ — Claude Recipe</title>
+<meta name="description" content="経費も利益も確定申告も、何もわからなくて大丈夫。請求書やレシートをフォルダに入れて“全部おまかせ”の文を送るだけ。売上・経費・利益の計算までAIに丸投げする方法を、いちばんやさしく解説します。">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/copy.js"></script>
+<!-- ▼ Google AdSense：姉妹サイトと同一アカウント。サイト追加＆承認後にこの行を有効化
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5746304162931871" crossorigin="anonymous"></script>
+-->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand__logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand__mark">Claude <b>Recipe</b></span>
+    </a>
+    <nav class="nav">
+      <a href="../articles.html">記事一覧</a>
+      <a href="../index.html#start">はじめての方へ</a>
+      <a href="../about.html">このサイトは？</a>
+      <a class="btn btn--primary btn--sm" href="../index.html#follow">フォローする</a>
+    </nav>
+  </div>
+</header>
+
+<article class="article">
+  <div class="wrap">
+    <a class="article__back" href="../articles.html">← 記事一覧にもどる</a>
+
+    <div class="article__banner th-money">
+      <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+        <rect x="52" y="30" width="96" height="80" rx="8" fill="#fff" stroke="#c9930f" stroke-width="4"/>
+        <rect x="66" y="46" width="46" height="7" rx="3.5" fill="#ffcb45"/>
+        <rect x="66" y="60" width="68" height="6" rx="3" fill="#f0e0b0"/>
+        <rect x="66" y="72" width="68" height="6" rx="3" fill="#f0e0b0"/>
+        <rect x="66" y="84" width="40" height="6" rx="3" fill="#f0e0b0"/>
+        <circle cx="150" cy="96" r="18" fill="#1fbfa3"/>
+        <path d="M142 96l5 5 9-10" stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div><span class="chip chip--money">お金・事務</span><span class="lvl-tag lvl-tag--beginner">初心者</span></div>
+    <h1>Claude Codeで確定申告（1）まず何を準備する？</h1>
+    <p class="article__lead">「経費って何？利益って？確定申告のやり方なんてサッパリ…」という人へ。<strong>むずかしいことは覚えなくて大丈夫。</strong>ファイルをフォルダに入れて、決まった文をコピペで送るだけ。計算も判断の下ごしらえも、ぜんぶClaude Codeに丸投げできます。</p>
+    <div class="article__meta">確定申告シリーズ 第1回<span class="dot"></span>約9分<span class="dot"></span>初心者向け</div>
+
+    <div class="series">
+      <h4>確定申告シリーズ（全7回）</h4>
+      <ol>
+        <li class="is-current"><a href="kakuteishinkoku-01-junbi.html">準備編：まず何を準備する？</a></li>
+        <li><a href="kakuteishinkoku-02-keihi.html">経費編：経費とレシートを集計する</a></li>
+        <li><a href="kakuteishinkoku-03-teishutsu.html">提出編：申告書をつくって提出する</a></li>
+        <li><a href="kakuteishinkoku-04-aoiro.html">青色申告65万円控除 実践編 <span class="paid">有料</span></a></li>
+        <li><a href="kakuteishinkoku-05-shohizei.html">消費税・インボイス編 <span class="paid">有料</span></a></li>
+        <li><a href="kakuteishinkoku-06-setsuzei.html">節税・控除の深掘り編 <span class="paid">有料</span></a></li>
+        <li><a href="kakuteishinkoku-07-tsumazuki.html">つまずき解決・修正申告編 <span class="paid">有料</span></a></li>
+      </ol>
+      <p class="series__note">1〜3は無料で読めます。4以降は「確定申告シリーズ 読み放題パス」で読めます。</p>
+    </div>
+
+    <div class="prose">
+      <p><strong>「経費って何？利益って？確定申告のやり方なんて全然わからない…」</strong>——大丈夫です。この記事は、まさにそういう人のために作りました。むずかしい言葉を覚える必要はありません。<strong>ファイルをフォルダに入れて、決まった文をコピペで送るだけ。</strong>あとの計算も、次に何をすればいいかも、Claude Codeが全部教えてくれます。</p>
+
+      <div class="callout">
+        <strong class="label">わからないままでOK</strong>
+        「経費」「利益」「控除」——こういう言葉の意味を、いま理解する必要はありません。全部おまかせで進められるように作っています。まずは、次の“まる投げ”の文を送ってみてください。
+      </div>
+
+      <h2>まず、これを送るだけ（全部まる投げ）</h2>
+      <p>細かい準備の前に、いちばん強いお願い文をどうぞ。これ1つで、<strong>ファイル探し・売上や利益の計算・「あなたが次にやること」</strong>まで、まとめてお願いできます。</p>
+      <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">確定申告のことが何もわかりません。全部おまかせしたいです。「請求書」フォルダに、請求書やレシートを入れてあります（PDFや写真が混ざっていてもOKです）。中身を全部探して読み取り、今年の売上・経費・利益（もうけ）を計算してください。そのうえで、私が確定申告をすべきかどうか、するなら何を・どの順番でやればよいかを、専門用語を使わずに教えてください。むずかしい判断は「税務署か税理士に確認」と書いてくれて大丈夫です。私がやることだけを、1つずつ順番に指示してください。</pre></div>
+      <p class="prompt__how">「請求書」の部分は、あなたがファイルを入れたフォルダの名前に書きかえてください。フォルダをまだ作っていない人は、この下から順に読んでいけば大丈夫です。</p>
+
+      <h2>役割分担はこれだけ（AI と あなた）</h2>
+      <p>むずかしいところは全部AI、あなたは「入れる・送る・見る」だけ。ひと目でわかるように分けました。</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>AIにおまかせでOK</th><th>あなたがやること（最後だけ）</th></tr></thead>
+          <tbody>
+            <tr><td>請求書・レシートを探して読み取る</td><td>ファイルをフォルダに入れる</td></tr>
+            <tr><td>売上・経費・利益（もうけ）を計算する</td><td>お願いの文を送る（コピペ）</td></tr>
+            <tr><td>使える控除さがし・申告書の下書き</td><td>できた内容をながめて確認する</td></tr>
+            <tr><td>用語ややり方をやさしく説明する</td><td>最後の送信ボタンを押す（パスワード等は自分で）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>お金や本人確認にかかわる<strong>最後のひと押し（送信・納税・マイナンバーやパスワードの入力）は、必ず自分で</strong>おこないます。AIは「下ごしらえ係」と覚えておくと安全です。</p>
+
+      <div class="ad-slot">
+        <span class="ad-slot__label">スポンサーリンク</span>
+        <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+      </div>
+
+      <h2>「フォルダって何？」という人へ</h2>
+      <p>そこからでも大丈夫。作り方ごとAIに聞いてしまいましょう。</p>
+      <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">パソコンで新しいフォルダを作る方法と、そこに請求書やレシートのファイルや写真を入れる方法を、初心者向けに一つずつ教えてください。私のパソコンはWindowsです。</pre></div>
+      <p class="prompt__how">Macを使っている人は、文の「Windows」を「Mac」に書きかえてください。</p>
+      <p>作ったフォルダに、請求書・レシート・領収書を放り込んでいきます。PDFでも、スマホで撮った写真でも、スクショでもOK。<strong>きれいに並べる必要はありません。</strong></p>
+
+      <h2>フォルダに入れるもの（あるものだけでOK）</h2>
+      <p>「集める」といっても、次のものを<strong>1つのフォルダにバラバラのまま放り込んでおくだけ</strong>。今ぜんぶ揃っていなくても大丈夫です。</p>
+      <ol class="steps">
+        <li><strong>入ってきたお金がわかるもの</strong>請求書、売上の記録、通帳の入金明細など。</li>
+        <li><strong>出ていったお金がわかるもの</strong>レシート・領収書、クレジットカードの明細、通帳の出金明細。</li>
+        <li><strong>控除の証明書（あれば）</strong>国民年金・国民健康保険の支払額、生命保険料の証明書、医療費の記録、ふるさと納税の受領証明書など。</li>
+        <li><strong>本人確認まわり</strong>マイナンバーカード（またはマイナンバー通知書＋身分証）。</li>
+        <li><strong>還付の振込先</strong>税金が戻る場合の口座。番号は自分で入力します（AIには渡さない）。</li>
+      </ol>
+
+      <h2>「白色」と「青色」、どっち？ → 迷ったらAIに選んでもらう</h2>
+      <p>確定申告には白色と青色の2種類がありますが、<strong>いま決めなくて大丈夫。</strong>はじめての年は、かんたんな「白色」でまったく問題ありません。「どっちが得か知りたい」という人は、これも丸投げできます。</p>
+      <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">確定申告の「白色」と「青色」のちがいを、小学生でもわかるくらいやさしく教えてください。そのうえで、私の場合はどちらがよさそうか、手間と節税のバランスで教えてください。私はフリーランス（または副業）で、今年の売上はだいたい◯◯円くらいです。青色にする場合に必要な手続きも教えてください。</pre></div>
+
+      <div class="callout">
+        <strong class="label">だいじな注意</strong>
+        この記事は仕組みをやさしく説明した一般的な情報です。税額や「自分が申告すべきか」の最終判断は、国税庁の公式情報や税務署・税理士さんに確認してください。マイナンバー・パスワード・口座番号などの重要情報は、AIに入力せずご自身で扱ってください。
+      </div>
+
+      <p>まだClaude Codeを入れていない人は、先に <a href="../articles.html">「はじめの一歩」</a> の記事から準備するとスムーズです。</p>
+
+      <h2>まとめ：やることは3つだけ</h2>
+      <p>むずかしく考えなくて大丈夫。あなたがやるのは、<strong>①フォルダを作る ②請求書やレシートを放り込む ③“全部おまかせ”の文を送る</strong>——これだけです。売上も利益も計算しなくてOK。次回は、その集計をもっとしっかりやって申告に使える形にする方法を解説します。</p>
+
+      <div class="faq">
+        <details>
+          <summary>経費とか利益とか、意味がわからなくても本当に大丈夫？</summary>
+          <p>はい。言葉の意味は知らなくても進められます。上の“まる投げ”の文には「専門用語を使わずに教えて」と入れてあるので、AIがあなたのレベルに合わせてやさしく説明し、やることだけを順番に指示してくれます。気になった言葉は、その場で「◯◯ってどういう意味？」と聞けばOKです。</p>
+        </details>
+        <details>
+          <summary>確定申告の期間はいつですか？</summary>
+          <p>例年、対象の年の翌年2月16日ごろ〜3月15日ごろが提出期間です（日付は年によって前後します）。還付の申告はもう少し早くから受け付けています。最新の日程は国税庁の公式サイトで確認してください。</p>
+        </details>
+        <details>
+          <summary>レシートは捨ててしまいました。大丈夫？</summary>
+          <p>クレジットカードや通帳の明細でも支出の記録になります。それもフォルダに入れておけばAIが読み取ります。ただし原則、帳簿や書類は一定期間の保存が必要です。</p>
+        </details>
+      </div>
+
+      <div class="ad-slot">
+        <span class="ad-slot__label">スポンサーリンク</span>
+        <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+      </div>
+    </div>
+
+    <a class="next-card" href="kakuteishinkoku-02-keihi.html">
+      <span><small>次の記事（第2回・無料）</small><b>経費とレシートを集計する →</b></span>
+      <span class="btn btn--primary btn--sm">つづきを読む</span>
+    </a>
+
+    <div class="sources">
+      <h4>参考・確認先</h4>
+      <p><a href="https://www.nta.go.jp/" target="_blank" rel="noopener">国税庁</a> ／ 確定申告書等作成コーナー（e-Tax）。制度や日程は必ず公式の最新情報を確認してください。</p>
+    </div>
+
+    <div class="article__foot">© 2026 Claude Recipe ／ 確定申告シリーズ 第1回</div>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="../index.html">
+        <span class="brand__logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand__mark">Claude <b>Recipe</b></span>
+      </a>
+      <p class="copy">パソコンが苦手でも大丈夫。AIで暮らしと仕事の手間を減らす、やさしい実践サイト。</p>
+      <p class="foot-sister">姉妹サイト：<a href="https://zeebraweb.com" target="_blank" rel="noopener">SUBGRADE（動画編集の解説）</a></p>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col"><h4>READ</h4><a href="../articles.html">記事一覧</a><a href="../index.html#start">はじめての方へ</a></div>
+      <div class="foot-col"><h4>INFO</h4><a href="../about.html">このサイトについて</a><a href="../privacy.html">プライバシーポリシー</a><a href="../about.html#contact">お問い合わせ</a></div>
+      <div class="foot-col"><h4>FOLLOW</h4><a href="#">X（旧Twitter）</a><a href="#">note</a></div>
+    </div>
+  </div>
+  <div class="wrap"><p class="copy">© 2026 Claude Recipe</p></div>
+</footer>
+
+</body>
+</html>

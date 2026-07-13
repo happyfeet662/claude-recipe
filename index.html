@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- SEO / OGP（公開ドメイン確定後に coderecipe 部分を差し替え） -->
+<link rel="canonical" href="https://happyfeet662.github.io/coderecipe/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1fbfa3">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Claude Recipe">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="Claude Recipe — AIにお願いして、暮らしの手間を減らす">
+<meta property="og:description" content="パソコンが苦手でも大丈夫。Claude Codeという“お願いできるAI”で、確定申告・請求書・SNS投稿・ホームページ作りを、いちばんやさしく解説します。">
+<meta property="og:url" content="https://happyfeet662.github.io/coderecipe/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claude Recipe — AIにお願いして、暮らしの手間を減らす">
+<meta name="twitter:description" content="パソコンが苦手でも大丈夫。Claude Codeで暮らしと仕事の手間を減らす、やさしい実践サイト。">
+<title>Claude Recipe — AIにお願いして、暮らしの手間を減らす</title>
+<meta name="description" content="パソコンが苦手でも大丈夫。Claude Codeという“お願いできるAI”で、確定申告・請求書・SNS投稿・ホームページ作りを、いちばんやさしく解説する初心者向けサイトです。">
+<link rel="stylesheet" href="assets/style.css">
+<!-- ▼ Google AdSense：姉妹サイトと同一アカウント。サイト追加＆承認後に有効化
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5746304162931871" crossorigin="anonymous"></script>
+-->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand__logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand__mark">Claude <b>Recipe</b></span>
+    </a>
+    <nav class="nav">
+      <a href="articles.html">記事一覧</a>
+      <a href="#start">はじめての方へ</a>
+      <a href="about.html">このサイトは？</a>
+      <a class="btn btn--primary btn--sm" href="#follow">フォローする</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="spark s1" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 0l2.4 9.6L24 12l-9.6 2.4L12 24l-2.4-9.6L0 12l9.6-2.4z" fill="#ffcb45"/></svg></span>
+  <span class="spark s2" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 0l2.4 9.6L24 12l-9.6 2.4L12 24l-2.4-9.6L0 12l9.6-2.4z" fill="#ff7a9c"/></svg></span>
+  <span class="spark s3" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 0l2.4 9.6L24 12l-9.6 2.4L12 24l-2.4-9.6L0 12l9.6-2.4z" fill="#8b7cf0"/></svg></span>
+  <span class="spark s4" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1fbfa3"/></svg></span>
+
+  <div class="wrap">
+    <div class="hero__text">
+      <span class="hero__eyebrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21v-8" stroke="#1fbfa3" stroke-width="2.4" stroke-linecap="round"/><path d="M12 14c0-3-2.4-5-5.5-5C6 12 8.5 14 12 14z" fill="#bfeee0" stroke="#1fbfa3" stroke-width="2" stroke-linejoin="round"/><path d="M12 12c0-3 2.4-5.4 5.5-5.4C17.5 9.8 15 12 12 12z" fill="#bfeee0" stroke="#1fbfa3" stroke-width="2" stroke-linejoin="round"/></svg>
+        パソコンが苦手でも大丈夫
+      </span>
+      <h1>むずかしいことは、<br><span class="brandy">AI</span>に<span class="u">お願い</span>しよう。</h1>
+      <p>
+        Claude Code（クロード・コード）は、話しかけるだけでパソコンの作業を代わりにやってくれる“お願いできるAI”。
+        確定申告・請求書・SNS投稿・ホームページ作りを、いちばんやさしく解説します。
+      </p>
+      <div class="hero__stats">
+        <div class="hero__stat"><b>0円</b><span>から始められる</span></div>
+        <div class="hero__stat"><b>スマホ</b><span>でもOK</span></div>
+      </div>
+      <div class="hero__actions">
+        <a class="btn btn--primary btn--lg" href="#start">はじめての方へ</a>
+        <a class="link-plain" href="articles.html">記事一覧を見る →</a>
+      </div>
+    </div>
+
+    <div class="hero__art" aria-hidden="true">
+      <svg viewBox="0 0 420 340" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="6" stdDeviation="0" flood-color="#00000012"/>
+          </filter>
+        </defs>
+        <ellipse cx="210" cy="304" rx="168" ry="20" fill="#cdeee5"/>
+        <!-- スマホ画面 -->
+        <g filter="url(#soft)">
+          <rect x="96" y="34" width="170" height="256" rx="26" fill="#ffffff" stroke="#c7ece2" stroke-width="4"/>
+          <rect x="150" y="46" width="62" height="9" rx="4.5" fill="#e7efe9"/>
+          <!-- チャットの吹き出し（人） -->
+          <rect x="118" y="78" width="118" height="34" rx="12" fill="#fff0f3"/>
+          <rect x="130" y="88" width="80" height="6" rx="3" fill="#ff7a9c"/>
+          <rect x="130" y="99" width="54" height="6" rx="3" fill="#ffc0cf"/>
+          <!-- チャットの吹き出し（AI） -->
+          <rect x="128" y="124" width="118" height="46" rx="12" fill="#e9f8f3"/>
+          <rect x="140" y="134" width="92" height="6" rx="3" fill="#1fbfa3"/>
+          <rect x="140" y="146" width="92" height="6" rx="3" fill="#8fe0d1"/>
+          <rect x="140" y="158" width="60" height="6" rx="3" fill="#8fe0d1"/>
+          <!-- 完了チェック -->
+          <circle cx="150" cy="200" r="15" fill="#1fbfa3"/>
+          <path d="M143 200l5 5 9-10" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="174" y="193" width="64" height="7" rx="3.5" fill="#e7efe9"/>
+          <rect x="174" y="205" width="44" height="7" rx="3.5" fill="#eef2ef"/>
+          <!-- 入力バー -->
+          <rect x="118" y="250" width="128" height="26" rx="13" fill="#f4f8f6" stroke="#e2ece7" stroke-width="2"/>
+          <circle cx="234" cy="263" r="9" fill="#ff7a9c"/>
+          <path d="M230 263h8M234 259v8" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+        </g>
+        <!-- 装飾 -->
+        <g transform="translate(300 96)">
+          <circle cx="0" cy="0" r="30" fill="#ffcb45" stroke="#fff" stroke-width="4"/>
+          <path d="M-11 -3l18 0M-11 6l12 0" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/>
+          <path d="M-9 -12l6 0" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/>
+        </g>
+        <path d="M70 150 l3 9 9 3 -9 3 -3 9 -3-9 -9-3 9-3z" fill="#8b7cf0"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- Claude Codeって何？ -->
+<section class="section" id="what">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="kicker">WHAT IS CLAUDE CODE</span>
+      <h2>Claude Codeって、なに？</h2>
+      <p>ひとことで言うと「パソコン仕事を代わりにやってくれる、話せるAI」です。</p>
+    </div>
+    <div class="intro">
+      <div class="intro__item">
+        <span class="intro__emoji" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <rect x="6" y="9" width="36" height="25" rx="10" fill="#d9f5ec" stroke="#1fbfa3" stroke-width="2.6"/>
+            <path d="M15 34v7l8-7z" fill="#d9f5ec" stroke="#1fbfa3" stroke-width="2.6" stroke-linejoin="round"/>
+            <circle cx="17" cy="21.5" r="2.3" fill="#1fbfa3"/>
+            <circle cx="24" cy="21.5" r="2.3" fill="#1fbfa3"/>
+            <circle cx="31" cy="21.5" r="2.3" fill="#1fbfa3"/>
+          </svg>
+        </span>
+        <h3>話しかけるだけ</h3>
+        <p>プログラミングの知識はいりません。「これやって」と日本語でお願いするだけで動きます。</p>
+      </div>
+      <div class="intro__item">
+        <span class="intro__emoji" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <rect x="11" y="9" width="26" height="32" rx="6" fill="#fff4d6" stroke="#c9930f" stroke-width="2.6"/>
+            <rect x="18" y="6" width="12" height="7" rx="3.5" fill="#ffcb45"/>
+            <path d="M16 22l3 3 6-6.5" stroke="#c9930f" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 32l3 3 6-6.5" stroke="#c9930f" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <h3>面倒を肩代わり</h3>
+        <p>書類づくり・計算・投稿・ホームページ作成など、時間のかかる作業をまとめてお任せ。</p>
+      </div>
+      <div class="intro__item">
+        <span class="intro__emoji" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <rect x="14" y="6" width="20" height="36" rx="6" fill="#eae6ff" stroke="#6a5acd" stroke-width="2.6"/>
+            <rect x="18" y="11" width="12" height="2.6" rx="1.3" fill="#6a5acd" opacity=".55"/>
+            <circle cx="24" cy="37" r="1.9" fill="#6a5acd"/>
+          </svg>
+        </span>
+        <h3>おうちで・スマホで</h3>
+        <p>特別な機材は不要。パソコンやスマホがあれば、すきま時間に少しずつ進められます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- はじめての3ステップ -->
+<section class="section section--pink" id="start">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="kicker">3 STEPS</span>
+      <h2>使うのは、たった3ステップ</h2>
+      <p>むずかしそうに見えて、やることはとてもシンプルです。</p>
+    </div>
+    <div class="howto">
+      <div class="howto__step">
+        <h3>準備する</h3>
+        <p>お使いのパソコン（またはスマホ）にClaude Codeを入れます。手順は記事でひとつずつ画像つきで解説します。</p>
+      </div>
+      <div class="howto__step">
+        <h3>フォルダごと渡す</h3>
+        <p>整理はしなくてOK。請求書やレシートをフォルダに放り込んで、そのまま渡すだけ。AIが探して読み取ります。</p>
+      </div>
+      <div class="howto__step">
+        <h3>お願いする</h3>
+        <p>あとは日本語でお願いするだけ。AIが下書きや計算、ファイル作りまで進めてくれます。</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px">
+      <a class="btn btn--pink btn--lg" href="articles.html">やり方を記事で見る →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 確定申告 特集（専用カラム） -->
+<section class="section" id="kakuteishinkoku">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="kicker">確定申告 特集</span>
+      <h2>確定申告、ぜんぶAIにおまかせ</h2>
+      <p>経費も利益も何もわからなくてOK。フォルダに放り込んで「計算して」と送るだけ。</p>
+    </div>
+    <div class="taxhub">
+      <span class="taxhub__badge">全7回シリーズ</span>
+      <h3>「何から始めれば…」がなくなる、7つの記事</h3>
+      <p class="taxhub__lead">①〜③は無料で、これだけで確定申告をひと通り自分でできます。もっと節税したい人は④以降（読み放題）へ。</p>
+      <ul class="taxhub__list">
+        <li><a href="articles/kakuteishinkoku-01-junbi.html">まず何を準備する？（全部おまかせ入門）</a><span class="taxhub__tag taxhub__tag--free">無料</span></li>
+        <li><a href="articles/kakuteishinkoku-02-keihi.html">経費とレシートを集計する</a><span class="taxhub__tag taxhub__tag--free">無料</span></li>
+        <li><a href="articles/kakuteishinkoku-03-teishutsu.html">申告書をつくって提出する</a><span class="taxhub__tag taxhub__tag--free">無料</span></li>
+        <li><a href="articles/kakuteishinkoku-04-aoiro.html">青色申告65万円控除 実践編</a><span class="taxhub__tag taxhub__tag--paid">有料</span></li>
+        <li><a href="articles/kakuteishinkoku-05-shohizei.html">消費税・インボイス編</a><span class="taxhub__tag taxhub__tag--paid">有料</span></li>
+        <li><a href="articles/kakuteishinkoku-06-setsuzei.html">節税・控除の深掘り編</a><span class="taxhub__tag taxhub__tag--paid">有料</span></li>
+        <li><a href="articles/kakuteishinkoku-07-tsumazuki.html">つまずき解決・修正申告編</a><span class="taxhub__tag taxhub__tag--paid">有料</span></li>
+      </ul>
+      <div class="taxhub__cta">
+        <a class="btn btn--primary btn--lg" href="articles/kakuteishinkoku-01-junbi.html">①から読みはじめる →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- カテゴリ / これから増える記事 -->
+<section class="section" id="topics">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="kicker">ARTICLES</span>
+      <h2>これから、こんな記事が増えます</h2>
+      <p>ぜんぶ「実際に自分でやってみた手順」を、やさしい言葉でまとめます。</p>
+    </div>
+
+    <div class="grid">
+
+      <!-- はじめの一歩 -->
+      <div class="card card--soon" data-level="beginner">
+        <div class="card__thumb th-start">
+          <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="70" r="40" fill="#fff" stroke="#1fbfa3" stroke-width="4"/>
+            <path d="M86 70l10 10 20-22" stroke="#1fbfa3" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M150 26l2 7 7 2-7 2-2 7-2-7-7-2 7-2z" fill="#ffcb45"/>
+          </svg>
+        </div>
+        <div class="card__body">
+          <div class="card__top"><span class="chip chip--start">はじめの一歩</span><span class="card__num">準備中</span></div>
+          <h3>Claude Codeを入れて、最初のお願いをしてみる</h3>
+          <p>インストールから「はじめまして」まで。いちばん最初につまずかないための入門。</p>
+          <div class="card__foot"><span class="tag-soon">まもなく公開</span></div>
+        </div>
+      </div>
+
+      <!-- お金・事務（公開中） -->
+      <a class="card" data-level="beginner" href="articles/kakuteishinkoku-01-junbi.html">
+        <div class="card__thumb th-money">
+          <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="52" y="30" width="96" height="80" rx="8" fill="#fff" stroke="#c9930f" stroke-width="4"/>
+            <rect x="66" y="46" width="46" height="7" rx="3.5" fill="#ffcb45"/>
+            <rect x="66" y="60" width="68" height="6" rx="3" fill="#f0e0b0"/>
+            <rect x="66" y="72" width="68" height="6" rx="3" fill="#f0e0b0"/>
+            <circle cx="150" cy="96" r="18" fill="#1fbfa3"/>
+            <path d="M142 96l5 5 9-10" stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="card__body">
+          <div class="card__top"><span class="chip chip--money">お金・事務</span><span class="card__num">新着 ①</span></div>
+          <h3>確定申告（1）まず何を準備する？</h3>
+          <p>はじめての確定申告。白色と青色のちがい、集めるもの、Claude Codeに頼めることを整理。</p>
+          <div class="card__foot"><span class="go">読む →</span><span>全4回シリーズ</span></div>
+        </div>
+      </a>
+
+      <!-- 発信・集客 -->
+      <div class="card card--soon" data-level="intermediate">
+        <div class="card__thumb th-sns">
+          <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="46" y="40" width="80" height="60" rx="12" fill="#fff" stroke="#db5b93" stroke-width="4"/>
+            <path d="M66 100l0 14 16-14z" fill="#fff" stroke="#db5b93" stroke-width="4" stroke-linejoin="round"/>
+            <rect x="60" y="56" width="52" height="6" rx="3" fill="#ff7a9c"/>
+            <rect x="60" y="68" width="40" height="6" rx="3" fill="#ffc0cf"/>
+            <circle cx="150" cy="52" r="16" fill="#ff7a9c"/>
+            <path d="M150 46v12M144 52h12" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="card__body">
+          <div class="card__top"><span class="chip chip--sns">発信・集客</span><span class="card__num">準備中</span></div>
+          <h3>Xの自動投稿・SNS運用をラクにする</h3>
+          <p>毎日の投稿がしんどい人へ。予約投稿や自動化のしくみを、コピペ中心で作ります。</p>
+          <div class="card__foot"><span class="tag-soon">準備中</span></div>
+        </div>
+      </div>
+
+      <!-- サイト作り -->
+      <div class="card card--soon" data-level="beginner">
+        <div class="card__thumb th-web">
+          <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="48" y="38" width="104" height="70" rx="10" fill="#fff" stroke="#2f8fd8" stroke-width="4"/>
+            <rect x="48" y="38" width="104" height="18" rx="10" fill="#dcefff"/>
+            <circle cx="60" cy="47" r="3" fill="#2f8fd8"/><circle cx="70" cy="47" r="3" fill="#8fc6f0"/><circle cx="80" cy="47" r="3" fill="#8fc6f0"/>
+            <rect x="62" y="66" width="76" height="7" rx="3.5" fill="#8fc6f0"/>
+            <rect x="62" y="80" width="50" height="7" rx="3.5" fill="#dcefff"/>
+            <path d="M150 24l2 7 7 2-7 2-2 7-2-7-7-2 7-2z" fill="#ffcb45"/>
+          </svg>
+        </div>
+        <div class="card__body">
+          <div class="card__top"><span class="chip chip--web">サイト作り</span><span class="card__num">準備中</span></div>
+          <h3>無料で自分のホームページを作って公開する</h3>
+          <p>お店・活動の紹介ページを、費用ゼロで。作って公開するまでを最短ルートで。</p>
+          <div class="card__foot"><span class="tag-soon">準備中</span></div>
+        </div>
+      </div>
+
+      <!-- 基本の使い方 -->
+      <div class="card card--soon" data-level="beginner">
+        <div class="card__thumb th-basic">
+          <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="70" r="40" fill="#fff" stroke="#6a5acd" stroke-width="4"/>
+            <text x="100" y="84" text-anchor="middle" font-family="'Hiragino Maru Gothic ProN',sans-serif" font-size="40" font-weight="700" fill="#6a5acd">?</text>
+            <path d="M150 26l2 7 7 2-7 2-2 7-2-7-7-2 7-2z" fill="#ffcb45"/>
+          </svg>
+        </div>
+        <div class="card__body">
+          <div class="card__top"><span class="chip chip--basic">基本の使い方</span><span class="card__num">準備中</span></div>
+          <h3>上手なお願いのしかた（コツと言い回し）</h3>
+          <p>AIに伝わりやすい頼み方のコツ。ちょっとした言い方で結果が変わります。</p>
+          <div class="card__foot"><span class="tag-soon">準備中</span></div>
+        </div>
+      </div>
+
+      <!-- 発信・集客2 -->
+      <div class="card card--soon" data-level="intermediate">
+        <div class="card__thumb th-web">
+          <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="54" y="44" width="92" height="58" rx="10" fill="#fff" stroke="#2f8fd8" stroke-width="4"/>
+            <path d="M70 88l16-18 12 12 10-12 14 18z" fill="#dcefff" stroke="#2f8fd8" stroke-width="3" stroke-linejoin="round"/>
+            <circle cx="128" cy="60" r="6" fill="#ffcb45"/>
+            <text x="100" y="122" text-anchor="middle" font-family="'Hiragino Maru Gothic ProN',sans-serif" font-size="13" font-weight="700" fill="#2f8fd8">AdSense</text>
+          </svg>
+        </div>
+        <div class="card__body">
+          <div class="card__top"><span class="chip chip--sns">発信・集客</span><span class="card__num">準備中</span></div>
+          <h3>作ったサイトで広告収入を得る（AdSense入門）</h3>
+          <p>ホームページに広告を貼って、少しずつ収入に。申請から設置までをやさしく。</p>
+          <div class="card__foot"><span class="tag-soon">準備中</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:40px">
+      <a class="btn btn--primary" href="articles.html">記事一覧を見る →</a>
+    </div>
+
+    <!-- ▼ 広告枠（AdSense承認後に有効化） -->
+    <div class="ad-slot">
+      <span class="ad-slot__label">スポンサーリンク</span>
+      <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="kicker">WHY Claude Recipe</span>
+      <h2>“やさしさ”がいちばんの取り柄です</h2>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="feature__icon" style="background:#d9f5ec">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10.5V20H4.2v-9.5H7zM7 10.5l4-6.2c1.2 0 2.1.9 2.1 2.1v3.1h4.6c1 0 1.8.95 1.6 2l-1.2 6.1c-.16.9-.95 1.1-1.85 1.1H7" fill="#bfeee0" stroke="#139e86" stroke-width="1.9" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>ぜんぶ自分で試した手順</h3>
+        <p>運営者が実際にやってみて、うまくいった方法だけを書いています。</p>
+      </div>
+      <div class="feature">
+        <div class="feature__icon" style="background:#ffe1ec">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 6.2C9.9 4.8 7.2 4.8 4.5 5.6v12.6c2.7-.8 5.4-.8 7.5.6 2.1-1.4 4.8-1.4 7.5-.6V5.6C16.8 4.8 14.1 4.8 12 6.2z" fill="#ffd0dd" stroke="#db5b93" stroke-width="1.9" stroke-linejoin="round"/><path d="M12 6.4v12.4" stroke="#db5b93" stroke-width="1.9" stroke-linecap="round"/></svg>
+        </div>
+        <h3>専門用語は最小限</h3>
+        <p>むずかしい言葉はできるだけ使わず、料理のレシピのように順番で。</p>
+      </div>
+      <div class="feature">
+        <div class="feature__icon" style="background:#eae6ff">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20.4S3.7 15 3.7 9.3C3.7 6.6 5.8 4.7 8.3 4.7c1.6 0 3 .85 3.7 2.1.7-1.25 2.1-2.1 3.7-2.1 2.5 0 4.6 1.9 4.6 4.6C20.3 15 12 20.4 12 20.4z" fill="#d8d0ff" stroke="#6a5acd" stroke-width="1.9" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>初心者・主婦の味方</h3>
+        <p>パソコンが苦手でも、家事や仕事のすきま時間で進められます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / FOLLOW -->
+<section class="section" id="about" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta">
+      <span class="spark" style="position:absolute;top:20px;left:30px;width:16px" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 0l2.4 9.6L24 12l-9.6 2.4L12 24l-2.4-9.6L0 12l9.6-2.4z" fill="#ffcb45"/></svg></span>
+      <span class="spark" style="position:absolute;bottom:24px;right:36px;width:14px" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 0l2.4 9.6L24 12l-9.6 2.4L12 24l-2.4-9.6L0 12l9.6-2.4z" fill="#ff7a9c"/></svg></span>
+      <h2>新しい記事は、SNSでお知らせします</h2>
+      <p>「こんなこと、AIにできる？」のリクエストも大歓迎です</p>
+      <div id="follow" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a class="btn btn--pink" href="#">X をフォロー</a>
+        <a class="btn btn--ghost" href="#">note を見る</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="index.html">
+        <span class="brand__logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand__mark">Claude <b>Recipe</b></span>
+      </a>
+      <p class="copy">パソコンが苦手でも大丈夫。AIで暮らしと仕事の手間を減らす、やさしい実践サイト。</p>
+      <p class="foot-sister">姉妹サイト：<a href="https://zeebraweb.com" target="_blank" rel="noopener">SUBGRADE（動画編集の解説）</a></p>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col">
+        <h4>READ</h4>
+        <a href="articles.html">記事一覧</a>
+        <a href="#start">はじめての方へ</a>
+        <a href="#topics">カテゴリ</a>
+      </div>
+      <div class="foot-col">
+        <h4>INFO</h4>
+        <a href="about.html">このサイトについて</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="about.html#contact">お問い合わせ</a>
+      </div>
+      <div class="foot-col">
+        <h4>FOLLOW</h4>
+        <a href="#">X（旧Twitter）</a>
+        <a href="#">note</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap"><p class="copy">© 2026 Claude Recipe</p></div>
+</footer>
+
+</body>
+</html>

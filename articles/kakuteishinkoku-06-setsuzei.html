@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://happyfeet662.github.io/claude-recipe/articles/kakuteishinkoku-06-setsuzei.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1fbfa3">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Claude Recipe">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="Claude Codeで確定申告（6）節税・控除の深掘り編">
+<meta property="og:description" content="使い忘れやすい所得控除、経費と家事按分、少額減価償却の特例まで。Claude Codeで自分に使える節税を洗い出す方法。読み放題パスで読めます。">
+<meta property="og:url" content="https://happyfeet662.github.io/claude-recipe/articles/kakuteishinkoku-06-setsuzei.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"Claude Codeで確定申告（6）節税・控除の深掘り編","inLanguage":"ja","author":{"@type":"Organization","name":"Claude Recipe編集部"},"publisher":{"@type":"Organization","name":"Claude Recipe"},"isAccessibleForFree":false,"mainEntityOfPage":"https://happyfeet662.github.io/claude-recipe/articles/kakuteishinkoku-06-setsuzei.html"}
+</script>
+<title>Claude Codeで確定申告（6）節税・控除の深掘り編 — Claude Recipe</title>
+<meta name="description" content="使い忘れやすい所得控除、経費と家事按分、少額減価償却の特例まで。Claude Codeで自分に使える節税を洗い出す方法。読み放題パスで読めます。">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/copy.js"></script>
+<script src="../assets/paywall.js"></script>
+<!-- ▼ Google AdSense：サイト追加＆承認後にこの行を有効化
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5746304162931871" crossorigin="anonymous"></script>
+-->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand__logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand__mark">Claude <b>Recipe</b></span>
+    </a>
+    <nav class="nav">
+      <a href="../articles.html">記事一覧</a>
+      <a href="../index.html#start">はじめての方へ</a>
+      <a href="../about.html">このサイトは？</a>
+      <a class="btn btn--primary btn--sm" href="../index.html#follow">フォローする</a>
+    </nav>
+  </div>
+</header>
+
+<article class="article">
+  <div class="wrap">
+    <a class="article__back" href="../articles.html">← 記事一覧にもどる</a>
+
+    <div class="article__banner th-money">
+      <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+        <path d="M60 96V64M60 64l-14 12M60 64l14 12" stroke="#1fbfa3" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="130" cy="70" r="30" fill="#fff" stroke="#c9930f" stroke-width="4"/>
+        <text x="130" y="80" text-anchor="middle" font-family="'Hiragino Maru Gothic ProN',sans-serif" font-size="26" font-weight="700" fill="#c9930f">¥</text>
+        <path d="M108 44l-8-8m8 8l-8 0m8 0l0 -8" stroke="#ff7a9c" stroke-width="3.4" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div><span class="chip chip--money">お金・事務</span><span class="lvl-tag lvl-tag--intermediate">中級者</span><span class="lvl-tag lvl-tag--paid">有料</span></div>
+    <h1>Claude Codeで確定申告（6）節税・控除の深掘り編</h1>
+    <p class="article__lead">確定申告は「正しく出す」だけでなく「払いすぎない」ことも大切です。使い忘れやすい控除や、経費の考え方を整理し、Claude Codeで“自分に使える節税”を洗い出す方法を紹介します。</p>
+    <div class="article__meta">確定申告シリーズ 第6回<span class="dot"></span>約13分<span class="dot"></span>有料 / 読み放題パス</div>
+
+    <div class="series">
+      <h4>確定申告シリーズ（全7回）</h4>
+      <ol>
+        <li><a href="kakuteishinkoku-01-junbi.html">準備編：まず何を準備する？</a></li>
+        <li><a href="kakuteishinkoku-02-keihi.html">経費編：経費とレシートを集計する</a></li>
+        <li><a href="kakuteishinkoku-03-teishutsu.html">提出編：申告書をつくって提出する</a></li>
+        <li><a href="kakuteishinkoku-04-aoiro.html">青色申告65万円控除 実践編 <span class="paid">有料</span></a></li>
+        <li><a href="kakuteishinkoku-05-shohizei.html">消費税・インボイス編 <span class="paid">有料</span></a></li>
+        <li class="is-current"><a href="kakuteishinkoku-06-setsuzei.html">節税・控除の深掘り編 <span class="paid">有料</span></a></li>
+        <li><a href="kakuteishinkoku-07-tsumazuki.html">つまずき解決・修正申告編 <span class="paid">有料</span></a></li>
+      </ol>
+      <p class="series__note">1〜3は無料。4以降は「確定申告シリーズ 読み放題パス」でまとめて読めます。</p>
+    </div>
+
+    <div class="prose">
+      <h2>節税には「2つの入り口」がある</h2>
+      <p>税金は「もうけ（所得）」にかかります。だから減らし方も2方向です。</p>
+      <ul>
+        <li><strong>経費をもれなく計上する</strong>（もうけ自体を正しく小さくする）</li>
+        <li><strong>所得控除を使い切る</strong>（もうけから差し引ける金額を増やす）</li>
+      </ul>
+      <p>どちらも“ズルをする”のではなく、<strong>使える制度をちゃんと使う</strong>という話です。まずは自分に当てはまるものを見つけることが大切です。</p>
+
+      <div class="callout">
+        <strong class="label">だいじな注意</strong>
+        控除や経費の可否・金額は状況で変わります。無理な計上はあとで問題になります。この記事は一般的な考え方の紹介です。最終判断は国税庁の情報や税理士さんに確認し、根拠となる書類は必ず残してください。
+      </div>
+
+      <div class="ad-slot">
+        <span class="ad-slot__label">スポンサーリンク</span>
+        <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+      </div>
+
+      <h3>この続き（有料）で分かること</h3>
+      <ul>
+        <li>使い忘れやすい所得控除の一覧と、対象になる人</li>
+        <li>iDeCo・小規模企業共済など「将来の備え＝節税」になる制度</li>
+        <li>家事按分・少額減価償却など、経費を取りこぼさないコツ</li>
+        <li>Claude Codeに“自分に使える節税”を洗い出してもらう例文</li>
+      </ul>
+
+      <div class="paywall" data-paywall="zeitax">
+
+        <div class="paywall__cta">
+          <div class="lockicon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="4.5" y="10.5" width="15" height="10" rx="3" fill="#fff" stroke="#c9930f" stroke-width="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" stroke="#c9930f" stroke-width="2" fill="none"/><circle cx="12" cy="15.5" r="1.6" fill="#c9930f"/></svg>
+          </div>
+          <h3>ここから先は「読み放題パス」で読めます</h3>
+          <p>確定申告シリーズの第4回以降（節税・消費税など）が、購入後まとめて読み放題になります。</p>
+          <ul class="paywall__perks">
+            <li>この記事の続きを全部読める</li>
+            <li>確定申告の有料記事はこれからもすべて読み放題</li>
+            <li>買い切り・追加料金なし</li>
+          </ul>
+          <p class="paywall__price"><b>¥980</b> <span class="once">買い切り（税込）</span></p>
+          <!-- ▼ Stripe決済リンクを作成し、下の href を差し替えてください。
+               Stripe側の「支払い後のリダイレクト先」を
+               https://（あなたのサイト）/unlock.html?series=zeitax&to=articles/kakuteishinkoku-06-setsuzei.html
+               に設定すると、購入後に自動で解錠されます。 -->
+          <div class="paywall__btn">
+            <a class="btn btn--primary btn--lg" href="https://buy.stripe.com/REPLACE_WITH_YOUR_LINK" rel="nofollow">購入して続きを読む</a>
+          </div>
+          <p class="paywall__note">お支払いはStripe（クレジットカード / Apple Pay / Google Pay）。購入後、この端末で自動的に読めるようになります。別の端末で読むときは、購入後に案内されるリンクをその端末でも開いてください。</p>
+        </div>
+
+        <div class="paywall__body">
+          <h2>使い忘れやすい所得控除</h2>
+          <p>年末調整のない個人事業主は、控除を自分で申告します。入れ忘れが多いものを確認しましょう。</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>控除</th><th>対象になる人・ポイント</th></tr></thead>
+              <tbody>
+                <tr><th>社会保険料控除</th><td>国民年金・国民健康保険。家族の分を払っていれば、それも対象になることがある</td></tr>
+                <tr><th>小規模企業共済等掛金控除</th><td>iDeCo・小規模企業共済の掛金。全額が控除対象</td></tr>
+                <tr><th>生命保険料控除</th><td>生命・介護医療・個人年金の保険料</td></tr>
+                <tr><th>地震保険料控除</th><td>地震保険の保険料</td></tr>
+                <tr><th>医療費控除</th><td>家族分を合算。年間の医療費が一定額を超えたとき</td></tr>
+                <tr><th>寄附金控除</th><td>ふるさと納税など（ワンストップ特例を使わない場合は申告が必要）</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>「将来の備え」がそのまま節税になる制度</h2>
+          <p>特に効果が大きいのが、掛金の全額が所得控除になる次の2つです。</p>
+          <ul>
+            <li><strong>iDeCo（個人型確定拠出年金）</strong>：老後資金を積み立てながら、掛金の全額が控除に。</li>
+            <li><strong>小規模企業共済</strong>：個人事業主の退職金づくり。こちらも掛金が全額控除。</li>
+          </ul>
+          <p>どちらも「払ったお金が手元から消える」のではなく、自分の将来のために積み立てながら税金が軽くなる、という点がポイントです。</p>
+
+          <h2>経費を取りこぼさないコツ</h2>
+          <ol class="steps">
+            <li><strong>家事按分を見直す</strong>自宅兼事務所の家賃・電気・通信は「仕事で使う割合」を経費に。割合の根拠をメモしておく。</li>
+            <li><strong>少額減価償却の特例（青色）</strong>青色申告なら、30万円未満の備品をその年の経費にできる特例が使えることがある。</li>
+            <li><strong>年払いのサービス料</strong>仕事で使うサブスクやツールの年会費も、忘れず経費に。</li>
+            <li><strong>決算前にできること</strong>必要な備品の購入時期を年内にするなど、無理のない範囲で調整。</li>
+          </ol>
+
+          <h2>Claude Codeで“自分の節税”を洗い出す</h2>
+          <p>制度は数が多く、自分に当てはまるものを探すのが大変です。ここをAIに整理してもらいます。</p>
+          <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">私は個人事業主で、国民年金・国民健康保険を払い、iDeCoに月1万円、生命保険にも入っています。ふるさと納税もしました。使えそうな所得控除をすべて挙げて、それぞれ何の書類が必要かを表にしてください。抜けやすい控除も教えてください。</pre></div>
+          <p>さらに「青色申告の場合と白色の場合で、ざっくりどのくらい税額が変わるか比べて」と頼めば、来年に向けた判断材料にもなります（金額はあくまで目安。最終確認は必ず自分と公式で）。</p>
+
+          <div class="callout">
+            <strong class="label">やりすぎないこと</strong>
+            節税は「使える制度を使う」まで。実態のない経費や、根拠のない按分は認められません。指摘されて追徴になれば逆効果です。迷ったら控えめに、証拠を残す——これが結局いちばん得です。
+          </div>
+
+          <div class="faq">
+            <details>
+              <summary>ふるさと納税はワンストップと確定申告どっち？</summary>
+              <p>確定申告をする人は、原則ワンストップ特例が使えないため、寄附金控除として申告に含めます。受領証明書（またはまとめた明細）を用意しましょう。</p>
+            </details>
+            <details>
+              <summary>iDeCoと小規模企業共済は両方使える？</summary>
+              <p>条件を満たせば併用できます。どちらも掛金が全額控除になるため、余裕資金の範囲で活用すると節税効果が高いです。加入・掛金の上限は各制度で確認を。</p>
+            </details>
+            <details>
+              <summary>家事按分の割合はどう決める？</summary>
+              <p>面積・使用時間など、実態に合った合理的な基準で決めます。「なぜその割合か」を説明できるようにメモを残しておくと安心です。迷う場合はClaude Codeに考え方を相談しつつ、控えめに設定しましょう。</p>
+            </details>
+          </div>
+
+          <div class="ad-slot">
+            <span class="ad-slot__label">スポンサーリンク</span>
+            <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <a class="next-card" href="kakuteishinkoku-07-tsumazuki.html">
+      <span><small>次の記事（第7回・有料 / 読み放題）</small><b>つまずき解決・修正申告編 →</b></span>
+      <span class="btn btn--primary btn--sm">続きを見る</span>
+    </a>
+
+    <div class="sources">
+      <h4>参考・確認先</h4>
+      <p><a href="https://www.nta.go.jp/" target="_blank" rel="noopener">国税庁</a>。控除の要件・上限は年によって変わることがあります。必ず公式の最新情報でご確認ください。</p>
+    </div>
+
+    <div class="article__foot">© 2026 Claude Recipe ／ 確定申告シリーズ 第6回（有料）</div>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="../index.html">
+        <span class="brand__logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand__mark">Claude <b>Recipe</b></span>
+      </a>
+      <p class="copy">パソコンが苦手でも大丈夫。AIで暮らしと仕事の手間を減らす、やさしい実践サイト。</p>
+      <p class="foot-sister">姉妹サイト：<a href="https://zeebraweb.com" target="_blank" rel="noopener">SUBGRADE（動画編集の解説）</a></p>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col"><h4>READ</h4><a href="../articles.html">記事一覧</a><a href="../index.html#start">はじめての方へ</a></div>
+      <div class="foot-col"><h4>INFO</h4><a href="../about.html">このサイトについて</a><a href="../privacy.html">プライバシーポリシー</a><a href="../about.html#contact">お問い合わせ</a></div>
+      <div class="foot-col"><h4>FOLLOW</h4><a href="#">X（旧Twitter）</a><a href="#">note</a></div>
+    </div>
+  </div>
+  <div class="wrap"><p class="copy">© 2026 Claude Recipe</p></div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://happyfeet662.github.io/claude-recipe/sitemap.xml

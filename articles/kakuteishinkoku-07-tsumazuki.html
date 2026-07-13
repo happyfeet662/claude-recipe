@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://happyfeet662.github.io/claude-recipe/articles/kakuteishinkoku-07-tsumazuki.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1fbfa3">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Claude Recipe">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="Claude Codeで確定申告（7）つまずき解決・修正申告編">
+<meta property="og:description" content="e-Taxのエラー、提出後に間違いに気づいたとき、期限に間に合わないとき。あわてず対処するための早見と、Claude Codeの使い方。読み放題パスで読めます。">
+<meta property="og:url" content="https://happyfeet662.github.io/claude-recipe/articles/kakuteishinkoku-07-tsumazuki.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"Claude Codeで確定申告（7）つまずき解決・修正申告編","inLanguage":"ja","author":{"@type":"Organization","name":"Claude Recipe編集部"},"publisher":{"@type":"Organization","name":"Claude Recipe"},"isAccessibleForFree":false,"mainEntityOfPage":"https://happyfeet662.github.io/claude-recipe/articles/kakuteishinkoku-07-tsumazuki.html"}
+</script>
+<title>Claude Codeで確定申告（7）つまずき解決・修正申告編 — Claude Recipe</title>
+<meta name="description" content="e-Taxのエラー、提出後に間違いに気づいたとき、期限に間に合わないとき。あわてず対処するための早見と、Claude Codeの使い方。読み放題パスで読めます。">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/copy.js"></script>
+<script src="../assets/paywall.js"></script>
+<!-- ▼ Google AdSense：サイト追加＆承認後にこの行を有効化
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5746304162931871" crossorigin="anonymous"></script>
+-->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand__logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand__mark">Claude <b>Recipe</b></span>
+    </a>
+    <nav class="nav">
+      <a href="../articles.html">記事一覧</a>
+      <a href="../index.html#start">はじめての方へ</a>
+      <a href="../about.html">このサイトは？</a>
+      <a class="btn btn--primary btn--sm" href="../index.html#follow">フォローする</a>
+    </nav>
+  </div>
+</header>
+
+<article class="article">
+  <div class="wrap">
+    <a class="article__back" href="../articles.html">← 記事一覧にもどる</a>
+
+    <div class="article__banner th-money">
+      <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="70" r="34" fill="#fff" stroke="#c9930f" stroke-width="4"/>
+        <path d="M100 54v22" stroke="#c9930f" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="100" cy="88" r="3.6" fill="#c9930f"/>
+        <path d="M150 40l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#1fbfa3"/>
+      </svg>
+    </div>
+
+    <div><span class="chip chip--money">お金・事務</span><span class="lvl-tag lvl-tag--intermediate">中級者</span><span class="lvl-tag lvl-tag--paid">有料</span></div>
+    <h1>Claude Codeで確定申告（7）つまずき解決・修正申告編</h1>
+    <p class="article__lead">「e-Taxでエラーが出た」「提出後に間違いに気づいた」「期限に間に合わなそう」。確定申告のよくあるつまずきは、落ち着いて対処すれば大丈夫。早見表と、Claude Codeの使い方をまとめました。</p>
+    <div class="article__meta">確定申告シリーズ 第7回<span class="dot"></span>約12分<span class="dot"></span>有料 / 読み放題パス</div>
+
+    <div class="series">
+      <h4>確定申告シリーズ（全7回）</h4>
+      <ol>
+        <li><a href="kakuteishinkoku-01-junbi.html">準備編：まず何を準備する？</a></li>
+        <li><a href="kakuteishinkoku-02-keihi.html">経費編：経費とレシートを集計する</a></li>
+        <li><a href="kakuteishinkoku-03-teishutsu.html">提出編：申告書をつくって提出する</a></li>
+        <li><a href="kakuteishinkoku-04-aoiro.html">青色申告65万円控除 実践編 <span class="paid">有料</span></a></li>
+        <li><a href="kakuteishinkoku-05-shohizei.html">消費税・インボイス編 <span class="paid">有料</span></a></li>
+        <li><a href="kakuteishinkoku-06-setsuzei.html">節税・控除の深掘り編 <span class="paid">有料</span></a></li>
+        <li class="is-current"><a href="kakuteishinkoku-07-tsumazuki.html">つまずき解決・修正申告編 <span class="paid">有料</span></a></li>
+      </ol>
+      <p class="series__note">1〜3は無料。4以降は「確定申告シリーズ 読み放題パス」でまとめて読めます。</p>
+    </div>
+
+    <div class="prose">
+      <h2>つまずいても、たいていは取り返せる</h2>
+      <p>確定申告は、間違えても修正できる仕組みになっています。エラーで止まっても、提出後にミスが見つかっても、期限に遅れても、それぞれ「次にやること」が決まっています。まずは落ち着いて、当てはまるところを見ていきましょう。</p>
+
+      <div class="callout">
+        <strong class="label">だいじな注意</strong>
+        手続きの詳細や期限は年・状況で異なります。この記事は一般的な対処の流れです。実際の手続きは国税庁の情報や税務署・税理士さんで確認してください。エラー画面の内容にマイナンバーやパスワードが含まれる場合、その部分は消してからAIに見せてください。
+      </div>
+
+      <div class="ad-slot">
+        <span class="ad-slot__label">スポンサーリンク</span>
+        <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+      </div>
+
+      <h3>この続き（有料）で分かること</h3>
+      <ul>
+        <li>e-Taxでよくあるエラーと、その対処</li>
+        <li>提出後に間違いに気づいたときの直し方（修正申告・更正の請求）</li>
+        <li>期限に間に合わないときにまずやること</li>
+        <li>Claude Codeにエラー内容を貼って解決策を聞く使い方</li>
+      </ul>
+
+      <div class="paywall" data-paywall="zeitax">
+
+        <div class="paywall__cta">
+          <div class="lockicon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="4.5" y="10.5" width="15" height="10" rx="3" fill="#fff" stroke="#c9930f" stroke-width="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" stroke="#c9930f" stroke-width="2" fill="none"/><circle cx="12" cy="15.5" r="1.6" fill="#c9930f"/></svg>
+          </div>
+          <h3>ここから先は「読み放題パス」で読めます</h3>
+          <p>確定申告シリーズの第4回以降（つまずき解決・節税など）が、購入後まとめて読み放題になります。</p>
+          <ul class="paywall__perks">
+            <li>この記事の続きを全部読める</li>
+            <li>確定申告の有料記事はこれからもすべて読み放題</li>
+            <li>買い切り・追加料金なし</li>
+          </ul>
+          <p class="paywall__price"><b>¥980</b> <span class="once">買い切り（税込）</span></p>
+          <!-- ▼ Stripe決済リンクを作成し、下の href を差し替えてください。
+               Stripe側の「支払い後のリダイレクト先」を
+               https://（あなたのサイト）/unlock.html?series=zeitax&to=articles/kakuteishinkoku-07-tsumazuki.html
+               に設定すると、購入後に自動で解錠されます。 -->
+          <div class="paywall__btn">
+            <a class="btn btn--primary btn--lg" href="https://buy.stripe.com/REPLACE_WITH_YOUR_LINK" rel="nofollow">購入して続きを読む</a>
+          </div>
+          <p class="paywall__note">お支払いはStripe（クレジットカード / Apple Pay / Google Pay）。購入後、この端末で自動的に読めるようになります。別の端末で読むときは、購入後に案内されるリンクをその端末でも開いてください。</p>
+        </div>
+
+        <div class="paywall__body">
+          <h2>e-Taxでよくあるつまずき</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>こんなとき</th><th>まず試すこと</th></tr></thead>
+              <tbody>
+                <tr><th>マイナンバーカードが読み取れない</th><td>スマホのかざす位置を変える／カードのパスワードを再確認／別ブラウザや専用アプリを最新版に</td></tr>
+                <tr><th>ログインできない</th><td>マイナンバーカード方式かID・パスワード方式かを確認。ID/パス方式は税務署で発行が必要</td></tr>
+                <tr><th>控除の入力欄が見つからない</th><td>「作成コーナー」の該当ステップまで進む。用語が不明ならその場でAIに質問</td></tr>
+                <tr><th>金額が合わない</th><td>集計表と入力値を突き合わせる。桁・税率・二重計上をチェック</td></tr>
+                <tr><th>送信できない・エラーコード</th><td>エラーメッセージを控え、公式のヘルプで番号を検索。改善しなければ税務署へ</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>エラーメッセージは、そのままClaude Codeに貼って「これはどういう意味？どう対処する？」と聞くのが早いです（個人情報部分は消してから）。</p>
+
+          <h2>提出後に間違いに気づいたら</h2>
+          <p>あわてなくて大丈夫。気づいたタイミングで対処法が決まっています。</p>
+          <ul>
+            <li><strong>期限内に気づいた</strong>：正しい内容でもう一度作って提出（訂正申告）。</li>
+            <li><strong>期限後・税額が少なすぎた</strong>：<strong>修正申告</strong>で正しい額に直す。早く出すほど余計な負担を抑えられます。</li>
+            <li><strong>期限後・税金を払いすぎていた</strong>：<strong>更正の請求</strong>で戻してもらう（原則5年以内）。</li>
+          </ul>
+
+          <h2>期限に間に合わないときは</h2>
+          <p>間に合わなくても「出さない」がいちばんダメ。遅れてでも提出する<strong>期限後申告</strong>ができます。遅れると加算税・延滞税がかかることがありますが、自主的に早く出すほど軽くなります。まずは分かる範囲で作って提出し、あとで直す——この順番が安全です。</p>
+
+          <h2>Claude Codeの使い方（つまずき対応）</h2>
+          <ol class="steps">
+            <li><strong>エラーの意味を聞く</strong>メッセージを貼って、原因と対処を平易に説明してもらう。</li>
+            <li><strong>やることを整理してもらう</strong>「修正申告の手順を、初心者向けに順番で教えて」と頼む。</li>
+            <li><strong>チェックリスト化</strong>再提出前の確認項目をリストにしてもらい、抜けを防ぐ。</li>
+            <li><strong>最終確認は公式で</strong>手続きの正否・期限は、必ず国税庁や税務署でも確認する。</li>
+          </ol>
+
+          <h3>そのまま使えるお願いの例文</h3>
+          <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">確定申告を提出したあとに、経費を1件入れ忘れていたことに気づきました。税額は本来より多く払っている状態です。この場合にやるべき手続きと、必要な書類、注意点を、初心者にもわかるように順番で教えてください。</pre></div>
+
+          <div class="callout">
+            <strong class="label">シリーズ完結・おつかれさまでした</strong>
+            準備から提出、節税、つまずき対応まで、確定申告のひと通りをカバーしました。制度は毎年少しずつ変わります。新しい話題（改正点など）は今後も記事を追加していきます。読み放題パスがあれば、追加分もそのまま読めます。
+          </div>
+
+          <div class="faq">
+            <details>
+              <summary>修正申告と更正の請求、どっちをすればいい？</summary>
+              <p>「税金が足りなかった」＝修正申告、「払いすぎていた」＝更正の請求、が基本の分かれ目です。どちらか迷う場合は、状況をClaude Codeに整理してもらいつつ、最終的に税務署で確認すると確実です。</p>
+            </details>
+            <details>
+              <summary>延滞税や加算税はいくらかかる？</summary>
+              <p>遅れた日数や理由によって変わります。自主的に早く申告・納付するほど軽くなる仕組みです。金額の詳細は国税庁の情報で確認してください。</p>
+            </details>
+            <details>
+              <summary>提出した書類は保存が必要ですか？</summary>
+              <p>はい。帳簿や領収書などは一定期間の保存義務があります。フォルダごとにまとめてバックアップしておくと、あとで見返すときも安心です。</p>
+            </details>
+          </div>
+
+          <div class="ad-slot">
+            <span class="ad-slot__label">スポンサーリンク</span>
+            <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <a class="next-card" href="kakuteishinkoku-01-junbi.html">
+      <span><small>シリーズを最初から</small><b>（1）まず何を準備する？に戻る →</b></span>
+      <span class="btn btn--primary btn--sm">目次へ</span>
+    </a>
+
+    <div class="sources">
+      <h4>参考・確認先</h4>
+      <p><a href="https://www.nta.go.jp/" target="_blank" rel="noopener">国税庁</a> ／ e-Tax ヘルプ。手続き・期限・エラー対処は必ず公式の最新情報でご確認ください。</p>
+    </div>
+
+    <div class="article__foot">© 2026 Claude Recipe ／ 確定申告シリーズ 第7回（有料）</div>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="../index.html">
+        <span class="brand__logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand__mark">Claude <b>Recipe</b></span>
+      </a>
+      <p class="copy">パソコンが苦手でも大丈夫。AIで暮らしと仕事の手間を減らす、やさしい実践サイト。</p>
+      <p class="foot-sister">姉妹サイト：<a href="https://zeebraweb.com" target="_blank" rel="noopener">SUBGRADE（動画編集の解説）</a></p>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col"><h4>READ</h4><a href="../articles.html">記事一覧</a><a href="../index.html#start">はじめての方へ</a></div>
+      <div class="foot-col"><h4>INFO</h4><a href="../about.html">このサイトについて</a><a href="../privacy.html">プライバシーポリシー</a><a href="../about.html#contact">お問い合わせ</a></div>
+      <div class="foot-col"><h4>FOLLOW</h4><a href="#">X（旧Twitter）</a><a href="#">note</a></div>
+    </div>
+  </div>
+  <div class="wrap"><p class="copy">© 2026 Claude Recipe</p></div>
+</footer>
+
+</body>
+</html>

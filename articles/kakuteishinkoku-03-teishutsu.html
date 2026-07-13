@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://happyfeet662.github.io/claude-recipe/articles/kakuteishinkoku-03-teishutsu.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1fbfa3">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Claude Recipe">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="Claude Codeで確定申告（3）申告書をつくって提出する">
+<meta property="og:description" content="集計から所得・控除・税額の流れ、Claude Codeでの下書きとチェックリスト、e-Taxでの提出の手順まで。無料3回でここまで到達できます。">
+<meta property="og:url" content="https://happyfeet662.github.io/claude-recipe/articles/kakuteishinkoku-03-teishutsu.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"Claude Codeで確定申告（3）申告書をつくって提出する","inLanguage":"ja","author":{"@type":"Organization","name":"Claude Recipe編集部"},"publisher":{"@type":"Organization","name":"Claude Recipe"},"mainEntityOfPage":"https://happyfeet662.github.io/claude-recipe/articles/kakuteishinkoku-03-teishutsu.html"}
+</script>
+<title>Claude Codeで確定申告（3）申告書をつくって提出する — Claude Recipe</title>
+<meta name="description" content="集計から所得・控除・税額の流れ、Claude Codeでの下書きとチェックリスト、e-Taxでの提出の手順まで。無料3回でここまで到達できます。">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/copy.js"></script>
+<!-- ▼ Google AdSense：サイト追加＆承認後にこの行を有効化
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5746304162931871" crossorigin="anonymous"></script>
+-->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand__logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand__mark">Claude <b>Recipe</b></span>
+    </a>
+    <nav class="nav">
+      <a href="../articles.html">記事一覧</a>
+      <a href="../index.html#start">はじめての方へ</a>
+      <a href="../about.html">このサイトは？</a>
+      <a class="btn btn--primary btn--sm" href="../index.html#follow">フォローする</a>
+    </nav>
+  </div>
+</header>
+
+<article class="article">
+  <div class="wrap">
+    <a class="article__back" href="../articles.html">← 記事一覧にもどる</a>
+
+    <div class="article__banner th-money">
+      <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+        <rect x="54" y="26" width="92" height="72" rx="8" fill="#fff" stroke="#c9930f" stroke-width="4"/>
+        <rect x="66" y="40" width="40" height="6" rx="3" fill="#ffcb45"/>
+        <rect x="66" y="52" width="68" height="5" rx="2.5" fill="#f0e0b0"/>
+        <rect x="66" y="62" width="68" height="5" rx="2.5" fill="#f0e0b0"/>
+        <rect x="66" y="72" width="50" height="5" rx="2.5" fill="#f0e0b0"/>
+        <path d="M96 104l40 0" stroke="#1fbfa3" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="150" cy="104" r="16" fill="#1fbfa3"/>
+        <path d="M143 104l5 5 9-10" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M78 108l10 0" stroke="#8fe0d1" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div><span class="chip chip--money">お金・事務</span><span class="lvl-tag lvl-tag--beginner">初心者</span></div>
+    <h1>Claude Codeで確定申告（3）申告書をつくって提出する</h1>
+    <p class="article__lead">集計ができたら、いよいよ申告書づくりと提出です。所得から税額までの流れ、Claude Codeでの下書き、e-Taxでの送り方までをやさしく解説します。無料の3回は、ここまでで「はじめての確定申告をひと通り自分でできる」内容です。</p>
+    <div class="article__meta">確定申告シリーズ 第3回<span class="dot"></span>約12分<span class="dot"></span>初心者向け</div>
+
+    <div class="series">
+      <h4>確定申告シリーズ（全7回）</h4>
+      <ol>
+        <li><a href="kakuteishinkoku-01-junbi.html">準備編：まず何を準備する？</a></li>
+        <li><a href="kakuteishinkoku-02-keihi.html">経費編：経費とレシートを集計する</a></li>
+        <li class="is-current"><a href="kakuteishinkoku-03-teishutsu.html">提出編：申告書をつくって提出する</a></li>
+        <li><a href="kakuteishinkoku-04-aoiro.html">青色申告65万円控除 実践編 <span class="paid">有料</span></a></li>
+        <li><a href="kakuteishinkoku-05-shohizei.html">消費税・インボイス編 <span class="paid">有料</span></a></li>
+        <li><a href="kakuteishinkoku-06-setsuzei.html">節税・控除の深掘り編 <span class="paid">有料</span></a></li>
+        <li><a href="kakuteishinkoku-07-tsumazuki.html">つまずき解決・修正申告編 <span class="paid">有料</span></a></li>
+      </ol>
+      <p class="series__note">ここまでの1〜3が無料です。もっと節税したい人は、第4回（読み放題パス）へ。</p>
+    </div>
+
+    <div class="prose">
+      <h2>「税金が決まるまで」の流れ</h2>
+      <p>むずかしそうに見えますが、順番はいつも同じです。この4ステップだけ押さえましょう。</p>
+      <ol class="steps">
+        <li><strong>売上 − 経費 ＝ もうけ（所得）</strong>前回の集計表を使えば、もう出ています。</li>
+        <li><strong>もうけ − 各種控除 ＝ 課税される所得</strong>控除は「差し引いてもらえる金額」。次で説明します。</li>
+        <li><strong>課税される所得 × 税率 ＝ 税額</strong>金額に応じて税率が決まります。</li>
+        <li><strong>税額 − 納めた分・還付 ＝ 最終の金額</strong>払いすぎていれば戻ってきます（還付）。</li>
+      </ol>
+      <p>この計算、<strong>あなたが電卓をたたく必要はありません</strong>。請求書やレシートのフォルダを渡せば、売上・経費・もうけ、そして申告書の下書きまで、一気にお願いできます。</p>
+
+      <h3>フォルダを渡して、下書きまで一気におまかせ</h3>
+      <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">「請求書」フォルダの中の請求書・レシートを全部探して読み取り、今年の売上・経費・もうけ（利益）を計算してください。そのうえで、私が入っている国民年金・国民健康保険・生命保険、ふるさと納税もふまえて、確定申告書のどこに何を書くかの下書きと、入力もれ防止のチェックリストを作ってください。私がやることだけを、順番に箇条書きで教えてください。</pre></div>
+      <p class="prompt__how">フォルダ名や、入っている保険・控除の部分を、自分に合わせて書きかえて送ってください。金額の計算はぜんぶAIがやります。</p>
+
+      <div class="callout">
+        <strong class="label">だいじな注意</strong>
+        税額や控除の金額は最終的にご自身と公式ツールで確認してください。e-Taxのログインや送信、マイナンバー・パスワード・口座番号の入力は、AIに任せず必ず自分で行います。AIは「下書きと確認」までにとどめるのが安全です。
+      </div>
+
+      <h2>忘れやすい「控除」をチェック</h2>
+      <p>控除を入れ忘れると、税金を払いすぎてしまいます。代表的なものを確認しましょう。</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>控除</th><th>こんな人に</th></tr></thead>
+          <tbody>
+            <tr><th>基礎控除</th><td>ほとんどの人が対象</td></tr>
+            <tr><th>社会保険料控除</th><td>国民年金・国民健康保険などを払った人</td></tr>
+            <tr><th>生命保険料控除</th><td>生命保険・医療保険などに入っている人</td></tr>
+            <tr><th>医療費控除</th><td>1年間の医療費が多くかかった人</td></tr>
+            <tr><th>寄附金控除</th><td>ふるさと納税をした人（ワンストップ未利用）</td></tr>
+            <tr><th>小規模企業共済等掛金控除</th><td>iDeCoや小規模企業共済に入っている人</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>「自分はどれが使える？」と迷ったら、支払い状況をClaude Codeに話して、当てはまりそうな控除を洗い出してもらいましょう（最終確認は証明書と公式で）。</p>
+
+      <div class="ad-slot">
+        <span class="ad-slot__label">スポンサーリンク</span>
+        <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+      </div>
+
+      <h2>Claude Codeで申告書の下書きをつくる</h2>
+      <p>集計表と控除の情報がそろったら、申告書に書き写す前の「下書き」と「入力チェックリスト」を作ってもらいます。</p>
+      <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">売上◯◯円、経費の科目別合計はこの表のとおりです。使えそうな所得控除は「基礎控除・社会保険料控除・生命保険料控除」です。確定申告書に入力する項目を、どこに何を書くかの一覧（下書き）にしてください。入力漏れを防ぐチェックリストもお願いします。</pre></div>
+      <p>できた下書きを見ながら、国税庁の「確定申告書等作成コーナー」やe-Taxに<strong>自分で入力</strong>していきます。AIの下書きはあくまで下ごしらえ。金額は必ず元の資料と照合しましょう。</p>
+
+      <p class="prompt__how">上の文をコピーして、「◯◯円」やカッコ内の控除名を、あなたの状況に書きかえてから送ってください。</p>
+
+      <p>「自分はどの控除が使えるの？」がわからないときは、支払い状況を伝えて洗い出してもらいましょう。</p>
+      <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">私はフリーランスです。国民年金と国民健康保険を払い、生命保険にも入っています。ふるさと納税もしました。医療費は家族全体で年間10万円ほどです。私が確定申告で使えそうな所得控除をすべて挙げて、それぞれ何の証明書・書類が必要かを表にしてください。</pre></div>
+
+      <h2>提出する（e-Taxが手軽）</h2>
+      <p>提出方法は主に3つ。おすすめは自宅から送れるe-Taxです。</p>
+      <ul>
+        <li><strong>e-Tax（マイナンバーカード方式）</strong>：スマホでカードを読み取ってログイン。自宅で完結。</li>
+        <li><strong>e-Tax（ID・パスワード方式）</strong>：事前に税務署で発行したID/パスでログイン。</li>
+        <li><strong>紙で提出</strong>：印刷して税務署へ郵送・持参。</li>
+      </ul>
+      <p>ログインやマイナンバーの入力は、画面の案内にしたがって<strong>自分で操作</strong>します。分からない用語が出てきたら、その場でClaude Codeに「この言葉どういう意味？」と聞くと詰まりません。</p>
+
+      <h2>提出のあとにやること</h2>
+      <ul>
+        <li><strong>納税</strong>：税金を納める場合は、口座振替・スマホ決済・コンビニなどから期限内に。</li>
+        <li><strong>還付</strong>：払いすぎていた場合は、指定した口座に後日振り込まれます。</li>
+        <li><strong>書類の保存</strong>：帳簿やレシートは一定期間の保管が必要です。フォルダごと保存しておきましょう。</li>
+      </ul>
+
+      <div class="callout">
+        <strong class="label">ここまでで基本は完了です</strong>
+        無料の第1〜3回で、はじめての確定申告をひと通り自分で進められます。おつかれさまでした。「もっと節税したい」「青色の65万円控除をねらいたい」という人は、次の第4回（有料・読み放題）で、複式簿記をClaude Codeで作る実践に進みます。
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>作成コーナーとe-Tax、何が違うの？</summary>
+          <p>「確定申告書等作成コーナー」は申告書を画面の案内どおりに作れる無料ツールで、そのままe-Tax送信もできます。はじめてなら、この作成コーナーを使うのが分かりやすいです。</p>
+        </details>
+        <details>
+          <summary>間違えて提出したらどうなる？</summary>
+          <p>提出後でも訂正できます（期限内なら出し直し、期限後は修正申告・更正の請求など）。あわてず、正しい金額で手続きし直しましょう。詳しくは公式情報を確認してください。</p>
+        </details>
+        <details>
+          <summary>無料の3記事だけでも申告できますか？</summary>
+          <p>はい。白色や、シンプルな内容ならこの3記事で自分で申告できます。第4回以降は「青色65万円控除」など、もう一歩踏み込んで節税したい人向けの内容です。</p>
+        </details>
+      </div>
+
+      <div class="ad-slot">
+        <span class="ad-slot__label">スポンサーリンク</span>
+        <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+      </div>
+    </div>
+
+    <a class="next-card" href="kakuteishinkoku-04-aoiro.html">
+      <span><small>次の記事（第4回・有料 / 読み放題パス）</small><b>青色申告65万円控除 実践編 →</b></span>
+      <span class="btn btn--primary btn--sm">続きを見る</span>
+    </a>
+
+    <div class="sources">
+      <h4>参考・確認先</h4>
+      <p><a href="https://www.nta.go.jp/" target="_blank" rel="noopener">国税庁</a> ／ 確定申告書等作成コーナー・e-Tax。手続き・日程は必ず公式の最新情報でご確認ください。</p>
+    </div>
+
+    <div class="article__foot">© 2026 Claude Recipe ／ 確定申告シリーズ 第3回（無料はここまで）</div>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="../index.html">
+        <span class="brand__logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand__mark">Claude <b>Recipe</b></span>
+      </a>
+      <p class="copy">パソコンが苦手でも大丈夫。AIで暮らしと仕事の手間を減らす、やさしい実践サイト。</p>
+      <p class="foot-sister">姉妹サイト：<a href="https://zeebraweb.com" target="_blank" rel="noopener">SUBGRADE（動画編集の解説）</a></p>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col"><h4>READ</h4><a href="../articles.html">記事一覧</a><a href="../index.html#start">はじめての方へ</a></div>
+      <div class="foot-col"><h4>INFO</h4><a href="../about.html">このサイトについて</a><a href="../privacy.html">プライバシーポリシー</a><a href="../about.html#contact">お問い合わせ</a></div>
+      <div class="foot-col"><h4>FOLLOW</h4><a href="#">X（旧Twitter）</a><a href="#">note</a></div>
+    </div>
+  </div>
+  <div class="wrap"><p class="copy">© 2026 Claude Recipe</p></div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://happyfeet662.github.io/claude-recipe/articles/kakuteishinkoku-04-aoiro.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1fbfa3">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Claude Recipe">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="Claude Codeで確定申告（4）青色申告65万円控除 実践編">
+<meta property="og:description" content="複式簿記の仕訳をClaude Codeで自動化し、青色申告65万円控除をねらう実践編。ここから先は「確定申告シリーズ 読み放題パス」で読めます。">
+<meta property="og:url" content="https://happyfeet662.github.io/claude-recipe/articles/kakuteishinkoku-04-aoiro.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"Claude Codeで確定申告（4）青色申告65万円控除 実践編","inLanguage":"ja","author":{"@type":"Organization","name":"Claude Recipe編集部"},"publisher":{"@type":"Organization","name":"Claude Recipe"},"isAccessibleForFree":false,"mainEntityOfPage":"https://happyfeet662.github.io/claude-recipe/articles/kakuteishinkoku-04-aoiro.html"}
+</script>
+<title>Claude Codeで確定申告（4）青色申告65万円控除 実践編 — Claude Recipe</title>
+<meta name="description" content="複式簿記の仕訳をClaude Codeで自動化し、青色申告65万円控除をねらう実践編。ここから先は「確定申告シリーズ 読み放題パス」で読めます。">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/copy.js"></script>
+<script src="../assets/paywall.js"></script>
+<!-- ▼ Google AdSense：サイト追加＆承認後にこの行を有効化
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5746304162931871" crossorigin="anonymous"></script>
+-->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand__logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand__mark">Claude <b>Recipe</b></span>
+    </a>
+    <nav class="nav">
+      <a href="../articles.html">記事一覧</a>
+      <a href="../index.html#start">はじめての方へ</a>
+      <a href="../about.html">このサイトは？</a>
+      <a class="btn btn--primary btn--sm" href="../index.html#follow">フォローする</a>
+    </nav>
+  </div>
+</header>
+
+<article class="article">
+  <div class="wrap">
+    <a class="article__back" href="../articles.html">← 記事一覧にもどる</a>
+
+    <div class="article__banner th-money">
+      <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+        <rect x="40" y="34" width="60" height="72" rx="8" fill="#fff" stroke="#c9930f" stroke-width="4"/>
+        <rect x="52" y="48" width="36" height="6" rx="3" fill="#f0e0b0"/>
+        <rect x="52" y="60" width="36" height="6" rx="3" fill="#f0e0b0"/>
+        <rect x="100" y="34" width="60" height="72" rx="8" fill="#e9f8f3" stroke="#1fbfa3" stroke-width="4"/>
+        <rect x="112" y="48" width="36" height="6" rx="3" fill="#8fe0d1"/>
+        <rect x="112" y="60" width="36" height="6" rx="3" fill="#8fe0d1"/>
+        <circle cx="100" cy="70" r="18" fill="#ffcb45" stroke="#fff" stroke-width="4"/>
+        <text x="100" y="78" text-anchor="middle" font-family="'Hiragino Maru Gothic ProN',sans-serif" font-size="18" font-weight="700" fill="#fff">65</text>
+      </svg>
+    </div>
+
+    <div><span class="chip chip--money">お金・事務</span><span class="lvl-tag lvl-tag--intermediate">中級者</span><span class="lvl-tag lvl-tag--paid">有料</span></div>
+    <h1>Claude Codeで確定申告（4）青色申告65万円控除 実践編</h1>
+    <p class="article__lead">無料の3回で基本ができたら、次は節税です。青色申告の65万円控除は、条件を満たせば大きな節税になります。むずかしそうな「複式簿記」を、Claude Codeでどう乗り越えるかを具体的に解説します。</p>
+    <div class="article__meta">確定申告シリーズ 第4回<span class="dot"></span>約14分<span class="dot"></span>有料 / 読み放題パス</div>
+
+    <div class="series">
+      <h4>確定申告シリーズ（全7回）</h4>
+      <ol>
+        <li><a href="kakuteishinkoku-01-junbi.html">準備編：まず何を準備する？</a></li>
+        <li><a href="kakuteishinkoku-02-keihi.html">経費編：経費とレシートを集計する</a></li>
+        <li><a href="kakuteishinkoku-03-teishutsu.html">提出編：申告書をつくって提出する</a></li>
+        <li class="is-current"><a href="kakuteishinkoku-04-aoiro.html">青色申告65万円控除 実践編 <span class="paid">有料</span></a></li>
+        <li><a href="kakuteishinkoku-05-shohizei.html">消費税・インボイス編 <span class="paid">有料</span></a></li>
+        <li><a href="kakuteishinkoku-06-setsuzei.html">節税・控除の深掘り編 <span class="paid">有料</span></a></li>
+        <li><a href="kakuteishinkoku-07-tsumazuki.html">つまずき解決・修正申告編 <span class="paid">有料</span></a></li>
+      </ol>
+      <p class="series__note">この第4回以降は「確定申告シリーズ 読み放題パス」で、まとめて読めます。</p>
+    </div>
+
+    <div class="prose">
+      <h2>65万円控除は、なぜおいしいのか</h2>
+      <p>青色申告の特典のひとつが「青色申告特別控除」。最大65万円を、もうけ（所得）からそのまま差し引けます。差し引ける＝<strong>その分だけ課税される所得が減る</strong>ので、所得税・住民税・国民健康保険料までまとめて軽くなる可能性があります。手間はかかりますが、効果は大きい制度です。</p>
+
+      <h3>65万円控除の主な条件（ざっくり）</h3>
+      <ul>
+        <li>事前に<strong>青色申告承認申請書</strong>を出していること</li>
+        <li><strong>複式簿記</strong>で記帳していること</li>
+        <li>貸借対照表・損益計算書を添付すること</li>
+        <li><strong>e-Taxで申告</strong>する（または電子帳簿保存）など、電子の要件を満たすこと</li>
+        <li>期限内に申告すること</li>
+      </ul>
+      <p>「複式簿記」と聞くと身構えますが、ここがまさにClaude Codeの出番。この記事では、仕訳の考え方から自動化のお願いの仕方まで、順番に進めます。</p>
+
+      <div class="callout">
+        <strong class="label">だいじな注意</strong>
+        控除の適用可否・金額は要件や年によって異なります。最終判断は国税庁の情報や税理士さんに確認してください。記帳の正確さは自分で担保する必要があります。AIは下ごしらえと確認の道具として使いましょう。
+      </div>
+
+      <div class="ad-slot">
+        <span class="ad-slot__label">スポンサーリンク</span>
+        <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+      </div>
+
+      <h3>この続き（有料）で分かること</h3>
+      <ul>
+        <li>複式簿記の「仕訳」を、専門用語ぬきで理解する</li>
+        <li>明細から<strong>仕訳をClaude Codeで自動作成</strong>するお願いの例文</li>
+        <li>会計ソフトと組み合わせて、入力を最短にする流れ</li>
+        <li>貸借対照表・損益計算書の下ごしらえと、提出前チェックリスト</li>
+      </ul>
+
+      <!-- ここから課金（無料はここまで） -->
+      <div class="paywall" data-paywall="zeitax">
+
+        <div class="paywall__cta">
+          <div class="lockicon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="4.5" y="10.5" width="15" height="10" rx="3" fill="#fff" stroke="#c9930f" stroke-width="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" stroke="#c9930f" stroke-width="2" fill="none"/><circle cx="12" cy="15.5" r="1.6" fill="#c9930f"/></svg>
+          </div>
+          <h3>ここから先は「読み放題パス」で読めます</h3>
+          <p>確定申告シリーズの第4回以降（青色65万円控除など）が、購入後まとめて読み放題になります。</p>
+          <ul class="paywall__perks">
+            <li>この記事の続き（複式簿記の自動化）を全部読める</li>
+            <li>これから追加される確定申告の有料記事も読み放題</li>
+            <li>買い切り・追加料金なし</li>
+          </ul>
+          <p class="paywall__price"><b>¥980</b> <span class="once">買い切り（税込）</span></p>
+          <!-- ▼ Stripe決済リンクを作成し、下の href を差し替えてください。
+               Stripe側の「支払い後のリダイレクト先」を
+               https://（あなたのサイト）/unlock.html?series=zeitax&to=articles/kakuteishinkoku-04-aoiro.html
+               に設定すると、購入後に自動で解錠されます。 -->
+          <div class="paywall__btn">
+            <a class="btn btn--primary btn--lg" href="https://buy.stripe.com/REPLACE_WITH_YOUR_LINK" rel="nofollow">購入して続きを読む</a>
+          </div>
+          <p class="paywall__note">お支払いはStripe（クレジットカード / Apple Pay / Google Pay）。購入後、この端末で自動的に読めるようになります。別の端末で読むときは、購入後に案内されるリンクをその端末でも開いてください。</p>
+        </div>
+
+        <div class="paywall__body">
+          <h2>複式簿記って、じつは何をするの？</h2>
+          <p>複式簿記は「お金が動いたとき、その<strong>原因と結果を2つの面から記録する</strong>」やり方です。たとえば「筆記用具を現金500円で買った」なら、①消耗品費が500円増えた ②現金が500円減った、の2つをセットで書きます。これを「仕訳（しわけ）」と呼びます。難しいのは用語だけで、やっていることは家計簿の延長です。</p>
+
+          <h3>仕訳の例（これだけ見れば雰囲気がわかる）</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>できごと</th><th>借方（左）</th><th>貸方（右）</th></tr></thead>
+              <tbody>
+                <tr><th>文具を現金で購入</th><td>消耗品費 500</td><td>現金 500</td></tr>
+                <tr><th>売上が銀行に入金</th><td>普通預金 50,000</td><td>売上 50,000</td></tr>
+                <tr><th>ネット代をカード払い</th><td>通信費 5,000</td><td>未払金 5,000</td></tr>
+                <tr><th>私用のお金を事業へ</th><td>普通預金 100,000</td><td>事業主借 100,000</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>ポイントは「左（借方）と右（貸方）の金額が必ず一致する」こと。この一覧をぜんぶ手で作るのは大変ですが、ここをClaude Codeに任せます。</p>
+
+          <h2>Claude Codeで仕訳を自動作成する</h2>
+          <p>第2回で作った「日付・支払先・金額・科目」の明細があれば、そこから仕訳の形に変換してもらえます。</p>
+          <ol class="steps">
+            <li><strong>明細を用意する</strong>第2回の集計で使った明細（CSV / スプレッドシート）をフォルダに置きます。</li>
+            <li><strong>仕訳ルールを伝える</strong>「現金かカードか」「どの科目か」の対応を最初に決めておくと精度が上がります。</li>
+            <li><strong>仕訳表に変換してもらう</strong>下の例文で、借方・貸方の形に整えてもらいます。</li>
+            <li><strong>会計ソフトの形式で書き出す</strong>使っているソフトの取り込み用フォーマットに合わせてもらいます。</li>
+            <li><strong>自分で最終チェック</strong>金額の一致・科目の妥当性を確認して取り込みます。</li>
+          </ol>
+
+          <h3>そのまま使えるお願いの例文</h3>
+          <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">このフォルダの明細（日付・支払先・金額・支払方法・科目）を、複式簿記の仕訳表に変換してください。列は「日付・借方科目・借方金額・貸方科目・貸方金額・摘要」。カード払いは貸方を「未払金」、現金は「現金」、口座引き落としは「普通預金」にしてください。判断に迷う行は変換せず「要確認」に分けてください。</pre></div>
+          <p>さらに「◯◯会計ソフトの取り込み形式（CSV）に合わせて」と足せば、そのまま取り込めるファイルに近づきます。仕様が分からなければ、ソフトのエクスポートしたサンプルを渡して「この形式に合わせて」と頼むのが確実です。</p>
+
+          <div class="callout">
+            <strong class="label">精度を上げるコツ</strong>
+            最初に少量（10〜20件）で試して、仕訳のクセを直してから全件に広げましょう。「摘要（メモ）」に元の支払先を残してもらうと、あとで見返したときに追いやすくなります。
+          </div>
+
+          <h2>会計ソフトと組み合わせる</h2>
+          <p>65万円控除には、最終的に貸借対照表・損益計算書が必要です。これらは会計ソフトが自動で作ってくれるので、<strong>「仕訳づくりはClaude Code、集計と決算書はソフト」</strong>と役割分担すると効率的です。手入力が減り、ミスも見つけやすくなります。</p>
+
+          <h2>決算書の下ごしらえと最終チェック</h2>
+          <p>提出前に、Claude Codeにチェックリストを作ってもらいましょう。</p>
+          <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">青色申告65万円控除を受けるために、提出前に確認すべき項目のチェックリストを作ってください。複式簿記・貸借対照表・損益計算書・e-Tax・期限の観点で、抜けやすいポイントも教えてください。</pre></div>
+          <ul>
+            <li>借方と貸方の合計は一致しているか</li>
+            <li>事業用と私用（事業主貸・事業主借）が混ざっていないか</li>
+            <li>貸借対照表・損益計算書が用意できているか</li>
+            <li>e-Taxなど電子の要件を満たしているか</li>
+            <li>期限内に申告できるスケジュールか</li>
+          </ul>
+
+          <div class="faq">
+            <details>
+              <summary>簿記の知識がなくても大丈夫？</summary>
+              <p>用語の意味さえその都度Claude Codeに聞けば進められます。ただし「なぜこの仕訳になるか」を少しずつ理解すると、チェックの精度が上がり、控除も安全にねらえます。</p>
+            </details>
+            <details>
+              <summary>会計ソフトは必須ですか？</summary>
+              <p>65万円控除では決算書が必要なので、ソフトの利用が現実的です。無料〜低価格のものもあります。仕訳づくりをAIで時短し、集計はソフトに任せるのがラクです。</p>
+            </details>
+            <details>
+              <summary>この記事以外の続きも読めますか？</summary>
+              <p>はい。読み放題パスがあれば、これから追加される確定申告の有料記事（消費税・インボイス、節税の深掘りなど）もまとめて読めます。</p>
+            </details>
+          </div>
+
+          <div class="ad-slot">
+            <span class="ad-slot__label">スポンサーリンク</span>
+            <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+          </div>
+
+          <div class="callout">
+            <strong class="label">おつかれさまでした</strong>
+            これで、青色65万円控除に向けた記帳の“下ごしらえ”をAIに任せられます。次の有料記事では、消費税・インボイスや、もっと踏み込んだ節税を扱う予定です（読み放題パスでそのまま読めます）。
+          </div>
+        </div>
+
+      </div>
+      <!-- ここまで課金 -->
+
+    </div>
+
+    <a class="next-card" href="kakuteishinkoku-05-shohizei.html">
+      <span><small>次の記事（第5回・有料 / 読み放題）</small><b>消費税・インボイス編 →</b></span>
+      <span class="btn btn--primary btn--sm">続きを見る</span>
+    </a>
+
+    <div class="sources">
+      <h4>参考・確認先</h4>
+      <p><a href="https://www.nta.go.jp/" target="_blank" rel="noopener">国税庁</a>。青色申告特別控除の要件・様式は、必ず公式の最新情報でご確認ください。</p>
+    </div>
+
+    <div class="article__foot">© 2026 Claude Recipe ／ 確定申告シリーズ 第4回（有料）</div>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="../index.html">
+        <span class="brand__logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand__mark">Claude <b>Recipe</b></span>
+      </a>
+      <p class="copy">パソコンが苦手でも大丈夫。AIで暮らしと仕事の手間を減らす、やさしい実践サイト。</p>
+      <p class="foot-sister">姉妹サイト：<a href="https://zeebraweb.com" target="_blank" rel="noopener">SUBGRADE（動画編集の解説）</a></p>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col"><h4>READ</h4><a href="../articles.html">記事一覧</a><a href="../index.html#start">はじめての方へ</a></div>
+      <div class="foot-col"><h4>INFO</h4><a href="../about.html">このサイトについて</a><a href="../privacy.html">プライバシーポリシー</a><a href="../about.html#contact">お問い合わせ</a></div>
+      <div class="foot-col"><h4>FOLLOW</h4><a href="#">X（旧Twitter）</a><a href="#">note</a></div>
+    </div>
+  </div>
+  <div class="wrap"><p class="copy">© 2026 Claude Recipe</p></div>
+</footer>
+
+</body>
+</html>
