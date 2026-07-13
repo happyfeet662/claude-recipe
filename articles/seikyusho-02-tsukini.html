@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://happyfeet662.github.io/claude-recipe/articles/seikyusho-02-tsukini.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1fbfa3">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Claude Recipe">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="Claude Codeで請求書（2）毎月の請求書を自動で量産する">
+<meta property="og:description" content="毎月ほぼ同じ請求書を作るのは、もう手作業でやらない。先月のをコピーして日付と金額だけ変える、顧客リストから一括で作る——ズボラでもできる量産のやり方。">
+<meta property="og:url" content="https://happyfeet662.github.io/claude-recipe/articles/seikyusho-02-tsukini.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"Claude Codeで請求書（2）毎月の請求書を自動で量産する","inLanguage":"ja","author":{"@type":"Organization","name":"Claude Recipe編集部"},"publisher":{"@type":"Organization","name":"Claude Recipe"},"mainEntityOfPage":"https://happyfeet662.github.io/claude-recipe/articles/seikyusho-02-tsukini.html"}
+</script>
+<title>Claude Codeで請求書（2）毎月の請求書を自動で量産する — Claude Recipe</title>
+<meta name="description" content="毎月ほぼ同じ請求書を作るのは、もう手作業でやらない。先月のをコピーして日付と金額だけ変える、顧客リストから一括で作る——ズボラでもできる量産のやり方。">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/copy.js"></script>
+<!-- ▼ Google AdSense：サイト追加＆承認後にこの行を有効化
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5746304162931871" crossorigin="anonymous"></script>
+-->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand__logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand__mark">Claude <b>Recipe</b></span>
+    </a>
+    <nav class="nav">
+      <a href="../articles.html">記事一覧</a>
+      <a href="../index.html#start">はじめての方へ</a>
+      <a href="../about.html">このサイトは？</a>
+      <a class="btn btn--primary btn--sm" href="../index.html#follow">フォローする</a>
+    </nav>
+  </div>
+</header>
+
+<article class="article">
+  <div class="wrap">
+    <a class="article__back" href="../articles.html">← 記事一覧にもどる</a>
+
+    <div class="article__banner th-money">
+      <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+        <rect x="40" y="34" width="60" height="76" rx="7" fill="#fff" stroke="#c9930f" stroke-width="4"/>
+        <rect x="52" y="48" width="30" height="6" rx="3" fill="#ffcb45"/>
+        <rect x="52" y="60" width="36" height="4.5" rx="2.2" fill="#f0e0b0"/>
+        <rect x="52" y="70" width="36" height="4.5" rx="2.2" fill="#f0e0b0"/>
+        <rect x="70" y="28" width="60" height="76" rx="7" fill="#fff" stroke="#c9930f" stroke-width="4"/>
+        <rect x="82" y="42" width="30" height="6" rx="3" fill="#ffcb45"/>
+        <rect x="82" y="54" width="36" height="4.5" rx="2.2" fill="#f0e0b0"/>
+        <rect x="82" y="64" width="36" height="4.5" rx="2.2" fill="#f0e0b0"/>
+        <rect x="100" y="22" width="60" height="76" rx="7" fill="#e9f8f3" stroke="#1fbfa3" stroke-width="4"/>
+        <rect x="112" y="36" width="30" height="6" rx="3" fill="#1fbfa3"/>
+        <rect x="112" y="48" width="36" height="4.5" rx="2.2" fill="#8fe0d1"/>
+        <rect x="112" y="58" width="36" height="4.5" rx="2.2" fill="#8fe0d1"/>
+      </svg>
+    </div>
+
+    <div><span class="chip chip--money">お金・事務</span><span class="lvl-tag lvl-tag--beginner">初心者</span></div>
+    <h1>Claude Codeで請求書（2）毎月の請求書を自動で量産する</h1>
+    <p class="article__lead">毎月ほとんど同じ内容の請求書を、手で作り直していませんか？ それ、もうやめられます。<strong>先月のをコピーして日付と金額だけ変える</strong>、あるいは<strong>顧客リストから一括で作る</strong>。ズボラでもできる、毎月の請求作業の自動化です。</p>
+    <div class="article__meta">請求書シリーズ 第2回<span class="dot"></span>約10分<span class="dot"></span>初心者向け</div>
+
+    <div class="series">
+      <h4>請求書シリーズ（全3回）</h4>
+      <ol>
+        <li><a href="seikyusho-01-hajimete.html">はじめての請求書：まる投げで1枚つくる</a></li>
+        <li class="is-current"><a href="seikyusho-02-tsukini.html">毎月の請求書を自動で量産する</a></li>
+        <li><a href="seikyusho-03-mitsumori-nyukin.html">見積書・入金チェックまで</a></li>
+      </ol>
+      <p class="series__note">3回とも無料。作った請求書は、確定申告シリーズの集計にもそのまま使えます。</p>
+    </div>
+
+    <div class="prose">
+      <p>毎月の請求書は「宛先も内容もほぼ同じ、変わるのは日付と金額くらい」というケースがほとんど。だからこそ自動化がぴったりです。やり方は大きく2つ。<strong>①先月のをコピーして変える</strong>、<strong>②顧客リストからまとめて作る</strong>。どちらもかんたんです。</p>
+
+      <div class="callout">
+        <strong class="label">ズボラでもOK</strong>
+        毎月ゼロから作らなくていいし、Excelの関数を覚える必要もありません。「先月のと同じで、日付と金額だけ変えて」と頼むだけ。フォルダに過去の請求書を置いておけば、AIがそれを見て作ってくれます。
+      </div>
+
+      <h2>やり方①：先月のをコピーして変える</h2>
+      <p>いちばんかんたんなのがこれ。過去の請求書が入ったフォルダを渡して、変わるところだけ伝えます。</p>
+      <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">このフォルダに、先月の請求書があります。同じ体裁で今月分を作ってください。変えるのは、発行日を今日・支払期限を今月末・請求番号を次の番号にすること、金額は税抜◯◯円にすることだけです。ほかの項目（宛先・振込先・登録番号など）は先月と同じでお願いします。消費税と合計は計算し直してください。</pre></div>
+      <p class="prompt__how">金額が毎月同じなら「金額も先月と同じ」でOK。1回頼めば、次からは「今月分もお願い」だけで通じます。</p>
+
+      <div class="ad-slot">
+        <span class="ad-slot__label">スポンサーリンク</span>
+        <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+      </div>
+
+      <h2>やり方②：顧客リストからまとめて作る</h2>
+      <p>取引先が複数あるなら、一覧表（顧客名・金額・内容）を用意しておくと、全員分をまとめて作れます。表はスプレッドシートでもメモでもOK。</p>
+      <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">この一覧（取引先名・内容・税抜金額）をもとに、取引先ごとの請求書を今月分まとめて作ってください。発行日は今日、支払期限は今月末、私の屋号・振込先・登録番号は先月の請求書と同じにしてください。消費税と合計はそれぞれ計算し、1社ずつPDFにして「請求書_取引先名_年月」の名前で保存してください。</pre></div>
+      <p>取引先が5社でも10社でも、1回のお願いでまとめて作れます。毎月これを送るだけで、請求作業が数分で終わります。</p>
+
+      <h2>請求番号がかぶらないように</h2>
+      <p>請求書には管理用の通し番号（請求番号）を付けるのがおすすめです。あとで入金チェックや確定申告のときに探しやすくなります。番号の付け方も任せられます。</p>
+      <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">このフォルダの過去の請求書を見て、いちばん新しい請求番号を確認し、今月分はその続きの番号になるように付けてください。番号のルールは「年月-連番（例：2026-03-001）」でお願いします。</pre></div>
+
+      <div class="callout">
+        <strong class="label">だいじな注意</strong>
+        できあがった請求書は、金額・振込先・請求番号を自分の目でも確認してから送ってください。取引先や口座の情報は個人情報です。まとめて作ったときは、宛先の取り違えがないか特に注意しましょう。
+      </div>
+
+      <h2>まとめ</h2>
+      <p>毎月の請求書は「先月のをコピーして変える」か「一覧からまとめて作る」で、手作業から卒業できます。作った請求書はフォルダにためておけば、次回以降の量産にも、確定申告の集計にもそのまま使えます。次回は、<strong>見積書の作り分けと、入金チェック（未入金の洗い出し）</strong>までを解説します。</p>
+
+      <div class="faq">
+        <details>
+          <summary>過去の請求書がPDFでもコピーできますか？</summary>
+          <p>できます。PDFでも中身を読み取って、同じ体裁の今月分を作れます。フォルダに入れて「これと同じ形で」と頼めばOKです。</p>
+        </details>
+        <details>
+          <summary>金額が毎月バラバラでも大丈夫？</summary>
+          <p>問題ありません。一覧表に今月の金額を書いて渡すか、「今月は◯◯円」と伝えれば、その金額で作ってくれます。</p>
+        </details>
+        <details>
+          <summary>取引先ごとに振込先や条件が違います。</summary>
+          <p>一覧表に取引先ごとの条件（振込先・支払期限など）の列を足しておけば、それぞれに合わせて作り分けてくれます。</p>
+        </details>
+      </div>
+
+      <div class="ad-slot">
+        <span class="ad-slot__label">スポンサーリンク</span>
+        <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+      </div>
+    </div>
+
+    <a class="next-card" href="seikyusho-03-mitsumori-nyukin.html">
+      <span><small>次の記事（第3回・無料）</small><b>見積書・入金チェックまで →</b></span>
+      <span class="btn btn--primary btn--sm">つづきを読む</span>
+    </a>
+
+    <div class="sources">
+      <h4>参考・確認先</h4>
+      <p><a href="https://www.nta.go.jp/" target="_blank" rel="noopener">国税庁</a>。請求書・帳簿の保存や記載要件は公式の最新情報もご確認ください。</p>
+    </div>
+
+    <div class="article__foot">© 2026 Claude Recipe ／ 請求書シリーズ 第2回</div>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="../index.html">
+        <span class="brand__logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand__mark">Claude <b>Recipe</b></span>
+      </a>
+      <p class="copy">パソコンが苦手でも大丈夫。AIで暮らしと仕事の手間を減らす、やさしい実践サイト。</p>
+      <p class="foot-sister">姉妹サイト：<a href="https://zeebraweb.com" target="_blank" rel="noopener">SUBGRADE（動画編集の解説）</a></p>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col"><h4>READ</h4><a href="../articles.html">記事一覧</a><a href="../index.html#start">はじめての方へ</a></div>
+      <div class="foot-col"><h4>INFO</h4><a href="../about.html">このサイトについて</a><a href="../privacy.html">プライバシーポリシー</a><a href="../about.html#contact">お問い合わせ</a></div>
+      <div class="foot-col"><h4>FOLLOW</h4><a href="#">X（旧Twitter）</a><a href="#">note</a></div>
+    </div>
+  </div>
+  <div class="wrap"><p class="copy">© 2026 Claude Recipe</p></div>
+</footer>
+
+</body>
+</html>

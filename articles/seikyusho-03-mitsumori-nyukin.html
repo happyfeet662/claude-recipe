@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://happyfeet662.github.io/claude-recipe/articles/seikyusho-03-mitsumori-nyukin.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1fbfa3">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Claude Recipe">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="Claude Codeで請求書（3）見積書・入金チェックまで">
+<meta property="og:description" content="見積書・納品書の作り分けから、通帳明細と付き合わせて未入金を洗い出す入金チェック、催促メールの下書きまで。お金の取りこぼしを防ぐ最後の仕上げ。">
+<meta property="og:url" content="https://happyfeet662.github.io/claude-recipe/articles/seikyusho-03-mitsumori-nyukin.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"Claude Codeで請求書（3）見積書・入金チェックまで","inLanguage":"ja","author":{"@type":"Organization","name":"Claude Recipe編集部"},"publisher":{"@type":"Organization","name":"Claude Recipe"},"mainEntityOfPage":"https://happyfeet662.github.io/claude-recipe/articles/seikyusho-03-mitsumori-nyukin.html"}
+</script>
+<title>Claude Codeで請求書（3）見積書・入金チェックまで — Claude Recipe</title>
+<meta name="description" content="見積書・納品書の作り分けから、通帳明細と付き合わせて未入金を洗い出す入金チェック、催促メールの下書きまで。お金の取りこぼしを防ぐ最後の仕上げ。">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/copy.js"></script>
+<!-- ▼ Google AdSense：サイト追加＆承認後にこの行を有効化
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5746304162931871" crossorigin="anonymous"></script>
+-->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand__logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand__mark">Claude <b>Recipe</b></span>
+    </a>
+    <nav class="nav">
+      <a href="../articles.html">記事一覧</a>
+      <a href="../index.html#start">はじめての方へ</a>
+      <a href="../about.html">このサイトは？</a>
+      <a class="btn btn--primary btn--sm" href="../index.html#follow">フォローする</a>
+    </nav>
+  </div>
+</header>
+
+<article class="article">
+  <div class="wrap">
+    <a class="article__back" href="../articles.html">← 記事一覧にもどる</a>
+
+    <div class="article__banner th-money">
+      <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+        <rect x="34" y="34" width="58" height="74" rx="7" fill="#fff" stroke="#c9930f" stroke-width="4"/>
+        <rect x="46" y="48" width="30" height="6" rx="3" fill="#ffcb45"/>
+        <rect x="46" y="60" width="34" height="4.5" rx="2.2" fill="#f0e0b0"/>
+        <rect x="46" y="70" width="34" height="4.5" rx="2.2" fill="#f0e0b0"/>
+        <path d="M98 70h16m0 0l-5-4m5 4l-5 4" stroke="#9aa5b1" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="122" y="40" width="52" height="62" rx="8" fill="#e9f8f3" stroke="#1fbfa3" stroke-width="4"/>
+        <path d="M134 70l7 7 14-15" stroke="#1fbfa3" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div><span class="chip chip--money">お金・事務</span><span class="lvl-tag lvl-tag--beginner">初心者</span></div>
+    <h1>Claude Codeで請求書（3）見積書・入金チェックまで</h1>
+    <p class="article__lead">請求書が作れるようになったら、最後の仕上げです。<strong>見積書・納品書の作り分け</strong>と、<strong>「ちゃんと振り込まれたか」の入金チェック</strong>まで自動化します。お金の取りこぼし（もらい忘れ）を防ぐ、いちばん大事な回です。</p>
+    <div class="article__meta">請求書シリーズ 第3回<span class="dot"></span>約11分<span class="dot"></span>初心者向け</div>
+
+    <div class="series">
+      <h4>請求書シリーズ（全3回）</h4>
+      <ol>
+        <li><a href="seikyusho-01-hajimete.html">はじめての請求書：まる投げで1枚つくる</a></li>
+        <li><a href="seikyusho-02-tsukini.html">毎月の請求書を自動で量産する</a></li>
+        <li class="is-current"><a href="seikyusho-03-mitsumori-nyukin.html">見積書・入金チェックまで</a></li>
+      </ol>
+      <p class="series__note">3回とも無料。作った請求書は、確定申告シリーズの集計にもそのまま使えます。</p>
+    </div>
+
+    <div class="prose">
+      <h2>見積書・納品書も同じように作れる</h2>
+      <p>見積書（先に金額を伝える書類）も、納品書（納品時に渡す書類）も、請求書とほぼ同じ内容です。だから作り方も同じ。「見積書にして」と言うだけで書類の種類が変わります。</p>
+      <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">取引先「（株）◯◯」に、□□の作業を税抜◯◯円で提案したいです。まず「見積書」を作ってください。有効期限は発行日から30日、消費税と合計も入れてください。この見積で受注できたら、同じ内容で請求書にも作り替えられるようにしておいてください。</pre></div>
+      <p class="prompt__how">「見積書 → 受注 → 納品書 → 請求書」と、同じ内容を使い回せます。「さっきの見積を請求書にして」と頼むだけで変換できます。</p>
+
+      <div class="ad-slot">
+        <span class="ad-slot__label">スポンサーリンク</span>
+        <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+      </div>
+
+      <h2>入金チェック：ちゃんと振り込まれた？</h2>
+      <p>いちばん大事なのに、いちばん面倒なのが入金の確認です。「請求したのに振り込まれていない」を見逃すと、お金をもらい損ねます。ここもClaude Codeにまかせましょう。</p>
+      <p>やり方は、<strong>出した請求書</strong>と、<strong>通帳（口座）の入金明細</strong>を渡して、突き合わせてもらうだけ。</p>
+      <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">このフォルダにある「出した請求書」と、通帳の入金明細（CSV）を照らし合わせてください。請求ごとに「入金済み」「未入金」を判定し、一覧表（取引先・請求額・入金日・状態）にしてください。金額や振込名義が少し違って迷うものは「要確認」に分けてください。未入金の合計も出してください。</pre></div>
+      <p class="prompt__how">振込名義が会社名と違う（担当者名で振り込まれる等）こともあるので、迷うものは「要確認」に分けてもらうのがコツ。最後は自分の目でも確認しましょう。</p>
+
+      <h2>未入金には、催促メールの下書きを</h2>
+      <p>未入金が見つかったら、角の立たない催促（お伺い）メールも下書きしてもらえます。</p>
+      <div class="prompt"><div class="prompt__bar"><span class="prompt__label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" fill="#fff" stroke="#139e86" stroke-width="2"/><path d="M9 4h6v3H9z" fill="#1fbfa3"/><path d="M9 12h6M9 15h4" stroke="#1fbfa3" stroke-width="1.6" stroke-linecap="round"/></svg> コピペして使えるお願い文</span><button class="prompt__copy" type="button">コピー</button></div><pre class="prompt__text">取引先「（株）◯◯」宛に、◯月分の請求（◯◯円・支払期限◯月末）がまだ入金確認できていない件で、失礼のないやわらかい確認メールの下書きを作ってください。行き違いだった場合を想定した、丁寧で角の立たない言い回しにしてください。</pre></div>
+      <p>送る前に、本当に未入金かをもう一度確認してから。行き違いのこともあるので、やわらかい文面が安心です。</p>
+
+      <div class="callout">
+        <strong class="label">だいじな注意</strong>
+        入金明細には口座情報などの個人情報が含まれます。AIに渡す前に、不要な情報は消しておくと安心です。金額の一致は最終的に自分の目でも確認してください。メールは下書きのまま送らず、内容を読んでから送信しましょう。
+      </div>
+
+      <h2>確定申告ともつながる</h2>
+      <p>ここまでで作った請求書・入金の一覧は、そのまま<strong>確定申告の「売上」の集計</strong>に使えます。1年ためておけば、確定申告シリーズの<a href="kakuteishinkoku-02-keihi.html">経費・集計編</a>と合わせて、売上も経費も一気に計算できます。</p>
+
+      <div class="callout">
+        <strong class="label">請求書シリーズ 完結</strong>
+        作る → 毎月量産する → 見積・入金まで管理する。これで請求まわりの手作業はほぼ卒業です。おつかれさまでした。次は「もっと効率化したい」「屋号ロゴやテンプレを仕込みたい」といった一歩進んだ話も追加していきます。
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>通帳明細はどうやって用意すればいい？</summary>
+          <p>多くの銀行はネットバンキングから入出金明細をCSVでダウンロードできます。それをフォルダに入れて渡すだけです。紙の通帳しかない場合は、写真を撮って渡しても読み取れます。</p>
+        </details>
+        <details>
+          <summary>振込名義が請求先と違うと判定できない？</summary>
+          <p>「◯◯（株）→ 担当者名」など、名義が違うことはよくあります。プロンプトのとおり「迷うものは要確認」に分けてもらえば、あとから自分で結び付けられます。一度対応を教えておけば、次からは自動で判定してくれます。</p>
+        </details>
+        <details>
+          <summary>見積書と請求書、日付や番号は分けるべき？</summary>
+          <p>はい。書類の種類ごとに発行日と番号を分けておくと、あとで管理しやすくなります。「見積番号」「請求番号」を別々に付けてもらいましょう。</p>
+        </details>
+      </div>
+
+      <div class="ad-slot">
+        <span class="ad-slot__label">スポンサーリンク</span>
+        <div class="ad-slot__box">広告スペース（レスポンシブ）</div>
+      </div>
+    </div>
+
+    <a class="next-card" href="kakuteishinkoku-01-junbi.html">
+      <span><small>あわせて読みたい（無料）</small><b>確定申告シリーズ：まず何を準備する？ →</b></span>
+      <span class="btn btn--primary btn--sm">読んでみる</span>
+    </a>
+
+    <div class="sources">
+      <h4>参考・確認先</h4>
+      <p><a href="https://www.nta.go.jp/" target="_blank" rel="noopener">国税庁</a>。書類の保存期間や記載要件は公式の最新情報もご確認ください。</p>
+    </div>
+
+    <div class="article__foot">© 2026 Claude Recipe ／ 請求書シリーズ 第3回</div>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="../index.html">
+        <span class="brand__logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand__mark">Claude <b>Recipe</b></span>
+      </a>
+      <p class="copy">パソコンが苦手でも大丈夫。AIで暮らしと仕事の手間を減らす、やさしい実践サイト。</p>
+      <p class="foot-sister">姉妹サイト：<a href="https://zeebraweb.com" target="_blank" rel="noopener">SUBGRADE（動画編集の解説）</a></p>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col"><h4>READ</h4><a href="../articles.html">記事一覧</a><a href="../index.html#start">はじめての方へ</a></div>
+      <div class="foot-col"><h4>INFO</h4><a href="../about.html">このサイトについて</a><a href="../privacy.html">プライバシーポリシー</a><a href="../about.html#contact">お問い合わせ</a></div>
+      <div class="foot-col"><h4>FOLLOW</h4><a href="#">X（旧Twitter）</a><a href="#">note</a></div>
+    </div>
+  </div>
+  <div class="wrap"><p class="copy">© 2026 Claude Recipe</p></div>
+</footer>
+
+</body>
+</html>
